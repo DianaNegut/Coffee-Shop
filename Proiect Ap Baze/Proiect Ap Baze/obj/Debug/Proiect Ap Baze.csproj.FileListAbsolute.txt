@@ -1,0 +1,18 @@
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\bin\Debug\Proiect Ap Baze.exe.config
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\bin\Debug\Proiect Ap Baze.exe
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\bin\Debug\Proiect Ap Baze.pdb
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\Proiect Ap Baze.csproj.AssemblyReference.cache
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\App.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\Proiect Ap Baze_MarkupCompile.cache
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\Proiect Ap Baze_MarkupCompile.lref
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\Proiect Ap Baze.g.resources
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\Proiect_Ap_Baze.Properties.Resources.resources
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\Proiect Ap Baze.csproj.GenerateResource.cache
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\Proiect Ap Baze.csproj.CoreCompileInputs.cache
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\Proiect Ap Baze.exe
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\Proiect Ap Baze.pdb
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\LoginPage.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\App.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\LoginPage.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\Window2.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\LAB 2\Proiect Ap Baze\Proiect Ap Baze\obj\Debug\Window2.baml

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -47,7 +46,6 @@ namespace Proiect_Ap_Baze
             if (!string.IsNullOrEmpty(txtPassword.Password) && txtPassword.Password.Length > 0)
             {
                 txtPassword.Visibility = Visibility.Collapsed;
-                
             }
             else
             {
@@ -59,44 +57,17 @@ namespace Proiect_Ap_Baze
         {
             if (!string.IsNullOrEmpty(txtEmail.Text) && !string.IsNullOrEmpty(txtPassword.Password))
             {
-                var clientTableAdapter = new CoffeeShopDataSetTableAdapters.ClientTableAdapter();
-                var clientDataSet = new CoffeeShopDataSet();
+                //MessageBox.Show("Autentificat cu succes!");
 
-                // Umplem DataTable-ul cu datele din tabel
-                clientTableAdapter.Fill(clientDataSet.Client);
+                Window2 mainForm = new Window2();
+                mainForm.Show(); // Afișează noua fereastră
 
-                // Găsim clientul care corespunde emailului
-                var foundClient = clientDataSet.Client
-                    .AsEnumerable()
-                    .FirstOrDefault(row => row.Field<string>("Email") == txtEmail.Text);
+                // Închide fereastra de login (opțional)
+                this.Hide();
 
-                // Verificăm dacă clientul există
-                if (foundClient != null)
-                {
-                    // Hash-uim parola introdusă de utilizator
-                    string hashedPassword = PasswordHasher.HashPassword(txtPassword.Password);
-
-                    // Verificăm parola
-                    if (foundClient.Field<string>("Parola") == hashedPassword)
-                    {
-                        MessageBox.Show("Autentificat cu succes!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Parola incorectă!");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Email-ul nu există în baza de date!");
-                }
             }
-            else
-            {
-                MessageBox.Show("Te rog, completează toate câmpurile!");
-            }
+
         }
-
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {

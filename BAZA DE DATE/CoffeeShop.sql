@@ -1,44 +1,45 @@
-CREATE DATABASE CoffeeShop
-ON PRIMARY
-(
-    Name = CoffeeShop_a,
-    FileName = 'D:\ATM\Anul 3\Sem 1\Ap Baze de date\Proiect\CoffeeShop.mdf',
-    Size = 15MB, -- KB, Mb, GB, TB
-    MaxSize = UNLIMITED,
-    FileGrowth = 15MB
-),
-(
-    Name = CoffeeShop_b,
-    FileName = 'D:\ATM\Anul 3\Sem 1\Ap Baze de date\Proiect\CoffeeShop.ndf',
-    Size = 15MB, -- KB, Mb, GB, TB
-    MaxSize = UNLIMITED,
-    FileGrowth = 15MB
-),
-(
-    Name = CoffeeShop_c,
-    FileName = 'D:\ATM\Anul 3\Sem 1\Ap Baze de date\Proiect\CoffeeShop1.ndf',
-    Size = 15MB, -- KB, Mb, GB, TB
-    MaxSize = UNLIMITED,
-    FileGrowth = 15MB
-)
-LOG ON
-(
-    Name = CoffeeShopa_log,
-    FileName = 'D:\ATM\Anul 3\Sem 1\Ap Baze de date\Proiect\CoffeeShop.ldf',
-    Size = 10MB, -- KB, Mb, GB, TB
-    MaxSize = UNLIMITED,
-    FileGrowth = 15MB
-),
-(
-    Name = CoffeeShopb_log,
-    FileName = 'D:\ATM\Anul 3\Sem 1\Ap Baze de date\Proiect\CoffeeShop1.ldf',
-    Size = 10MB, -- KB, Mb, GB, TB
-    MaxSize = UNLIMITED,
-    FileGrowth = 15MB
-);
+﻿--CREATE DATABASE CoffeeShop
+--ON PRIMARY
+--(
+--    Name = CoffeeShop_a,
+--    FileName = 'C:\BD\CoffeeShop.mdf',
+--    Size = 15MB, -- KB, Mb, GB, TB
+--    MaxSize = UNLIMITED,
+--    FileGrowth = 15MB
+--),
+--(
+--    Name = CoffeeShop_b,
+--    FileName = 'C:\BD\CoffeeShop.ndf',
+--    Size = 15MB, -- KB, Mb, GB, TB
+--    MaxSize = UNLIMITED,
+--    FileGrowth = 15MB
+--),
+--(
+--    Name = CoffeeShop_c,
+--    FileName = 'C:\BD\CoffeeShop1.ndf',
+--    Size = 15MB, -- KB, Mb, GB, TB
+--    MaxSize = UNLIMITED,
+--    FileGrowth = 15MB
+--)
+--LOG ON
+--(
+--    Name = CoffeeShopa_log,
+--    FileName = 'C:\BD\CoffeeShop.ldf',
+--    Size = 10MB, -- KB, Mb, GB, TB
+--    MaxSize = UNLIMITED,
+--    FileGrowth = 15MB
+--),
+--(
+--    NAME = CoffeeShopb_log,
+--    FILENAME = 'C:\BD\CoffeeShop1.ldf',
+--    SIZE = 10MB, -- Nu există spațiu între 10 și MB
+--    MAXSIZE = UNLIMITED, -- Corect, specifică dimensiunea maximă
+--    FILEGROWTH = 15MB -- Nu există spațiu între 15 și MB
+--);
 
 
 --------------------------------CREARE TABELE---------------------------------------------
+
 if OBJECT_ID('Client', 'u') is not null
 	drop table Client
 go

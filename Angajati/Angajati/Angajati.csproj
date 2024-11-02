@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Angajati</RootNamespace>
+    <AssemblyName>Angajati</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialDesignColors, Version=3.1.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.3.1.0\lib\net462\MaterialDesignColors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=5.1.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.5.1.0\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CoffeeShopDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeeShopDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Coffee_ShoppDataSet.cs">
+      <DependentUpon>Coffee_ShoppDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Coffee_ShoppDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Coffee_ShoppDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ferestre Angajati\Cafele.cs" />
+    <Compile Include="Ferestre Angajati\Comanda.cs" />
+    <Compile Include="Ferestre Angajati\Comenzi.xaml.cs">
+      <DependentUpon>Comenzi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ferestre Angajati\DespreNoi.xaml.cs">
+      <DependentUpon>DespreNoi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ferestre Angajati\EmpltyListVisibilityConverter.cs" />
+    <Compile Include="Ferestre Angajati\Icon_Comanda.xaml.cs">
+      <DependentUpon>Icon_Comanda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ferestre Angajati\Icon_Rezervare.xaml.cs">
+      <DependentUpon>Icon_Rezervare.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ferestre Angajati\profilAngajat.xaml.cs">
+      <DependentUpon>profilAngajat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ferestre Angajati\Rezervare.cs" />
+    <Compile Include="Ferestre Angajati\Rezervari.xaml.cs">
+      <DependentUpon>Rezervari.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Ferestre Angajati\Comenzi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ferestre Angajati\DespreNoi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ferestre Angajati\firstMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ferestre Angajati\Icon_Comanda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ferestre Angajati\Icon_Rezervare.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ferestre Angajati\profilAngajat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Forgot Password.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Login\LoginPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Login\Resetare Parola.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Login\Schimbare Parola.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Login\SignUp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ferestre Angajati\firstMenu.xaml.cs">
+      <DependentUpon>firstMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordHasher.cs" />
+    <Compile Include="Login\Forgot Password.xaml.cs" />
+    <Compile Include="Login\LoginPage.xaml.cs" />
+    <Compile Include="Login\Resetare Parola.xaml.cs" />
+    <Compile Include="Login\Schimbare Parola.xaml.cs" />
+    <Compile Include="Login\SignUp.xaml.cs" />
+    <Compile Include="Login\TokenGenerator.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Ferestre Angajati\Rezervari.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Message Box\Error.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Message Box\Error.xaml.cs">
+      <DependentUpon>Error.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="CoffeeShopDataSet.xsc">
+      <DependentUpon>CoffeeShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CoffeeShopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeeShopDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CoffeeShopDataSet.xss">
+      <DependentUpon>CoffeeShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Coffee_ShoppDataSet.xsc">
+      <DependentUpon>Coffee_ShoppDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Coffee_ShoppDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Coffee_ShoppDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Coffee_ShoppDataSet.xss">
+      <DependentUpon>Coffee_ShoppDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\triangles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Coffee-Beans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\homeicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\homeicon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\phone-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\profile-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\profileIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\coffee-cup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gold.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\receip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cafea.jpg" />
+    <Resource Include="Images\cafea.png" />
+    <Resource Include="Images\Email.jpg" />
+    <Resource Include="Images\Facebook.jpg" />
+    <Resource Include="Images\Facebook.png" />
+    <Resource Include="Images\Gmail.jpg" />
+    <Resource Include="Images\Gmail.png" />
+    <Resource Include="Images\Instagram.png" />
+    <Resource Include="Images\Password.jpg" />
+    <Resource Include="Images\Password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\eroare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\comanda_terminata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\comanda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rezervare.png" />
+    <Resource Include="Images\rezervare_terminata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\fericire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\user.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>

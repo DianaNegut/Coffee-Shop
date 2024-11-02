@@ -1,0 +1,92 @@
+﻿<Window x:Class="Angajati.Ferestre_Angajati.Icon_Comanda"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Angajati.Ferestre_Angajati"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Title="Icon_Comanda" Height="400" Width="430">
+
+    <Grid>
+        <Border CornerRadius="25" Height="400" VerticalAlignment="Center" HorizontalAlignment="Left" Width="410">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/gold.jpg"/>
+            </Border.Background>
+
+            <Grid HorizontalAlignment="Center" Height="23" Margin="0,42,0,0" VerticalAlignment="Top" Width="409"/>
+        </Border>
+
+        <TextBox x:Name="Nume_Client" Background="Transparent" HorizontalAlignment="Left" Height="20" Margin="155,73,0,0" 
+                 TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top" Width="150" Foreground="Black" 
+         FontWeight="Bold"/>
+
+        <TextBlock HorizontalAlignment="Left" Height="19" FontSize="15" TextWrapping="Wrap" Text="Nume Client:" VerticalAlignment="Top" Width="110" Margin="23,72,0,0"/>
+
+        <TextBox x:Name="Data" HorizontalAlignment="Left" Background="Transparent" Height="20" Margin="155,97,0,0" 
+                 TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.526,1.158" Foreground="Black" 
+         FontWeight="Bold"/>
+
+        <TextBlock HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Data:" FontSize="15" VerticalAlignment="Top" Width="89" Margin="23,98,0,0"/>
+
+        <TextBlock HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" FontSize="15"  Text="Modalitate Plata:" VerticalAlignment="Top" Width="137" Margin="23,126,0,0"/>
+
+        <TextBox x:Name="Modalitate_Plata" Background="Transparent" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" 
+                 Text="" IsReadOnly="True" VerticalAlignment="Top" Width="147" Margin="155,126,0,0" Foreground="Black" 
+         FontWeight="Bold"/>
+
+        <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" FontSize="15" Text="Continut comanda:" VerticalAlignment="Top" Width="137" Margin="23,167,0,0"/>
+
+        <TextBox x:Name="Numar_Comanda" HorizontalAlignment="Left" Background="Transparent" Height="20" Margin="165,38,0,0" 
+         TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.526,1.158" Foreground="Black" 
+ FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="18" Margin="0,40,0,0" TextWrapping="Wrap" Text="       NUMAR COMANDA:" 
+                   Foreground="Black" 
+         FontWeight="Bold" VerticalAlignment="Top" Width="193"/>
+
+        <Grid Margin="150,172,20,78">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <!-- Antetul coloanelor -->
+            <StackPanel Orientation="Horizontal" Margin="10,0,0,5" Grid.ColumnSpan="2">
+                <TextBlock Text="  Nume" FontWeight="Bold" Width="80" FontSize="14"/>
+                <TextBlock Text="Cantitate" FontWeight="Bold" Width="60" FontSize="14"/>
+                <TextBlock Text="        Pret" FontWeight="Bold" Width="80" FontSize="14"/>
+            </StackPanel>
+
+            <!-- ListView-ul care conține elementele -->
+            <ListView x:Name="ListViewProduse" Background="Transparent" BorderThickness="0" Margin="13,25,13,0" 
+              ItemsSource="{Binding ComenziDisponibile}" Width="234" Grid.ColumnSpan="2">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding NumeCafea}" FontSize="14" Width="100" Margin="0,0,10,0"/>
+                            <TextBlock Text="{Binding Cantitate}" FontSize="14" Width="60" Margin="0,0,10,0"/>
+                            <TextBlock Text="{Binding Pret}" FontSize="14" Width="60"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+
+
+
+        <Grid Height="30" VerticalAlignment="Top" Margin="360,15,0,0" HorizontalAlignment="Left" Width="50">
+            <Button x:Name="ExitBtn" BorderThickness="0,0,0,0" HorizontalAlignment="Center" Width="68" Click="ExitBtn_Click" RenderTransformOrigin="0.686,0.633">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/close.png" Stretch="Uniform" />
+                </Button.Background>
+            </Button>
+        </Grid>
+
+        <Button Content="Finalizata!" Style="{StaticResource comandabutton}" Margin="165,332,165,10" Click="ButtonFinalizareComanda_Click"/>
+        <Image Margin="28,197,268,63" Source="/Images/comanda_terminata.png"/>
+    </Grid>
+</Window>

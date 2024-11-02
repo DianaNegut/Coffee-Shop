@@ -1,0 +1,116 @@
+﻿<Window x:Class="Angajati.LoginPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Angajati"
+        mc:Ignorable="d"
+        Title="Window1" Height="740" Width="1220">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border CornerRadius="10 0 0 10">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/triangles.png" Stretch="UniformToFill"/>
+            </Border.Background>
+        </Border>
+
+        <Grid>
+            
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="Sign Up" Style="{StaticResource titleText}"/>
+                <TextBlock Text="Contactati-ne pentru mai multe detalii!" Style="{StaticResource normalText}" Opacity="0.8" Margin="20 30"/>
+                <Button Content="Sign Up" Style="{StaticResource button}" Foreground="White" Click="Button_Click_1"/>
+            </StackPanel>
+        </Grid>
+
+        <Border Background="#ffffff" Grid.Column="1" CornerRadius="0 10 10 0" MouseDown="Border_MouseDown" >
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="Log In!" Style="{StaticResource titleText}" Foreground="#265828"/>
+                
+                <TextBlock Text="Introduceti datele dumneavoastra de conectare!" Style="{StaticResource normalText}" Foreground="#878787" Margin="0 10 0 15"/>
+                <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="10">
+                    <Grid Margin="7 9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/Images/Email.jpg" Height="20"/>
+                        <TextBlock x:Name="textEmail" MouseDown="textEmail_MouseDown" Text="" Style="{StaticResource textHint}"/>
+                        <TextBox x:Name="txtEmail" TextChanged="txtEmail_TextChanged" Style="{StaticResource textBox}" Grid.Column="1" Margin="30,0,0,0" />
+
+                    </Grid>
+                    
+                </Border>
+                <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="10">
+                    <Grid Margin="7 9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/Images/Password.jpg" Height="20"/>
+                        <TextBlock x:Name="textPassword" MouseDown="textPassword_MouseDown" Text="Password" Style="{StaticResource textHint}"/>
+                        <PasswordBox x:Name="txtPassword" PasswordChanged="txtPassword_PasswordChanged" Style="{StaticResource textBox}" />
+
+                    </Grid>
+
+                </Border>
+                <Button Content="Forgot password?" Click="Button_Parola_uitata"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Padding="10"  
+                    BorderBrush="White" 
+                    BorderThickness="2" 
+                    Background="Transparent" 
+                    Foreground="#265828" 
+                    FontSize="16" 
+                    Cursor="Hand" > 
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                Background="{TemplateBinding Background}" 
+                                CornerRadius="5">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Foreground" Value="LimeGreen"/>
+                            <Setter Property="FontSize" Value="16"/>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <Button Content="Log In" Click="Button_Click" Style="{StaticResource mainbutton}"/>
+
+                <TextBlock Text="Contactati-ne pe retelele de socializare!" Style="{StaticResource normalText}" Foreground="#265828" Margin="0 10 0 0"/>
+                <StackPanel Orientation="Horizontal" Margin="0 10" HorizontalAlignment="Center">
+                    <Button Style="{StaticResource buttonCircle}" Click="Button_Click_Facebook">
+                        <Image Source="/Images/Facebook.png" Width="30" Height="30"/>
+                    </Button>
+                    <Button Style="{StaticResource buttonCircle}" Click="Button_Click_Instagram">
+                        <Image Source="/Images/Instagram.png" Width="25" Height="25"/>
+                    </Button>
+                    <Button Style="{StaticResource buttonCircle}">
+                        <Image Source="/Images/Gmail.jpg" Width="25" Height="25"/>
+                    </Button>
+
+                </StackPanel>
+
+            </StackPanel>
+            
+        </Border>
+
+
+
+
+
+    </Grid>
+</Window>

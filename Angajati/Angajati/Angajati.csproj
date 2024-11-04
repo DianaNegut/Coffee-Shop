@@ -159,6 +159,9 @@
     <Compile Include="Ferestre Angajati\firstMenu.xaml.cs">
       <DependentUpon>firstMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Message Box\Message.xaml.cs">
+      <DependentUpon>Message.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PasswordHasher.cs" />
     <Compile Include="Login\Forgot Password.xaml.cs" />
     <Compile Include="Login\LoginPage.xaml.cs" />
@@ -177,6 +180,10 @@
     <Page Include="Message Box\Error.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Message Box\Message.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -300,6 +307,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\succes.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" />

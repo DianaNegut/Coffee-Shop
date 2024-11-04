@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Angajati.Message_Box;
 
 namespace Angajati.Ferestre_Angajati
 {
@@ -73,13 +74,13 @@ namespace Angajati.Ferestre_Angajati
         private void Button_Feedback_Click(object sender, RoutedEventArgs e)
         {
 
-            string senderEmail = "preturi.alerta@gmail.com";
-            string senderPassword = "twcj qmgg ourc ncdh";
+            string senderEmail = "scriptcafe757@gmail.com";
+            string senderPassword = "lvkv xqfz yyya ulut";
             MailMessage mail = new MailMessage();
             string body = txtMesaj.Text;
             body += txtEmailAngajat.Text;
             mail.From = new MailAddress(senderEmail);
-            string recipientEmail = "negut.dianamihaela@gmail.com";
+            string recipientEmail = "scriptcafe757@gmail.com";
             //trimite la admin
             mail.To.Add(recipientEmail);
             mail.Subject = "Review";
@@ -94,12 +95,16 @@ namespace Angajati.Ferestre_Angajati
             try
             {
                 smtpClient.Send(mail);
-                Console.WriteLine($"Email successfully sent to {recipientEmail}!");
-                //mesaj email trimis cu succes
+                Message m = new Message();
+                m.SetErrorMessage("Emailul a fost trimis cu succes!");
+                m.Show();
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error sending email: {ex.Message}");
+                Error error = new Error();
+                error.SetErrorMessage("Eroare la trimiterea emailului!");
+                error.Show();
+                
             }
 
         }

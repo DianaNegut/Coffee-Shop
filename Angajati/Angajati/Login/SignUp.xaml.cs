@@ -180,7 +180,7 @@ namespace Angajati
                 if (textUsername.Visibility == Visibility.Visible)
                 {
                     Error error = new Error();
-                    error.SetErrorMessage("Username deja utilizat!\n Vă rugăm să introduceți un alt username.");
+                    error.SetErrorMessage("Username deja utilizat! Vă rugăm să introduceți un alt username.");
                     error.Show();
                     return;
                 }
@@ -196,8 +196,12 @@ namespace Angajati
                 newClientRow.Prenume = txtPrenume.Text.Trim();
                 newClientRow.DataNastere = myDatePicker.SelectedDate.Value;
                 coffeeShopDataSet.Client.AddClientRow(newClientRow);
-                // Salvează modificările în baza de date
                 adapter.Update(coffeeShopDataSet.Client);
+
+                Message mesaj = new Message();
+                mesaj.SetErrorMessage("Contul a fost creat cu succes!");
+                mesaj.Show();
+
 
                 LoginPage lp = new LoginPage();
                 this.Hide();

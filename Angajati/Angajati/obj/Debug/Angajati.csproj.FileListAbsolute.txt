@@ -79,3 +79,5 @@ C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Proiect v2.0 - Copy\Angajati\Angajati\obj\Debug\Angajati.csproj.GenerateResource.cache
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Proiect v2.0 - Copy\Angajati\Angajati\obj\Debug\Angajati.csproj.CoreCompileInputs.cache
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Proiect v2.0 - Copy\Angajati\Angajati\obj\Debug\Angajati.csproj.Up2Date
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Proiect v2.0 - Copy\Angajati\Angajati\obj\Debug\Message Box\Message.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Proiect v2.0 - Copy\Angajati\Angajati\obj\Debug\Message Box\Message.g.cs

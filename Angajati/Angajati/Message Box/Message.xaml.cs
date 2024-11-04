@@ -15,31 +15,26 @@ using System.Windows.Shapes;
 namespace Angajati.Message_Box
 {
     /// <summary>
-    /// Interaction logic for Error.xaml
+    /// Interaction logic for Message.xaml
     /// </summary>
-    public partial class Error : Window
+    public partial class Message : Window
     {
-        public Error()
+        public Message()
         {
             InitializeComponent();
         }
-        public void SetErrorMessage( string message )
-        {
-           
-            lblErrorMessage.Text = message;
-        }
 
-        private void btnOk_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_OK(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+        public void SetErrorMessage(string message)
+        {
+
+            lblMessageContent.Text = message;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

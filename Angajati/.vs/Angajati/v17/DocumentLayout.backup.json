@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Proiect v2.0 - Copy\\Angajati\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\proiect v2.0 - copy\\angajati\\angajati\\ferestre angajati\\desprenoi.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\ferestre angajati\\desprenoi.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\proiect v2.0 - copy\\angajati\\angajati\\ferestre angajati\\desprenoi.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\ferestre angajati\\desprenoi.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\proiect v2.0 - copy\\angajati\\angajati\\ferestre angajati\\profilangajat.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\ferestre angajati\\profilangajat.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\proiect v2.0 - copy\\angajati\\angajati\\ferestre angajati\\profilangajat.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\ferestre angajati\\profilangajat.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\proiect v2.0 - copy\\angajati\\angajati\\ferestre angajati\\icon_rezervare.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\ferestre angajati\\icon_rezervare.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\proiect v2.0 - copy\\angajati\\angajati\\ferestre angajati\\firstmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\ferestre angajati\\firstmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +26,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Icon_Rezervare.xaml",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Proiect v2.0 - Copy\\Angajati\\Angajati\\Ferestre Angajati\\Icon_Rezervare.xaml",
-              "RelativeDocumentMoniker": "Angajati\\Ferestre Angajati\\Icon_Rezervare.xaml",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Proiect v2.0 - Copy\\Angajati\\Angajati\\Ferestre Angajati\\Icon_Rezervare.xaml",
-              "RelativeToolTip": "Angajati\\Ferestre Angajati\\Icon_Rezervare.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-02T11:14:24.081Z",
+              "DocumentIndex": 0,
+              "Title": "Ferestre Angajati\\DespreNoi.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Proiect v2.0 - Copy\\Angajati\\Angajati\\Ferestre Angajati\\DespreNoi.xaml.cs",
+              "RelativeDocumentMoniker": "Angajati\\Ferestre Angajati\\DespreNoi.xaml.cs",
+              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Proiect v2.0 - Copy\\Angajati\\Angajati\\Ferestre Angajati\\DespreNoi.xaml.cs",
+              "RelativeToolTip": "Angajati\\Ferestre Angajati\\DespreNoi.xaml.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAADwv2UAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T19:15:33.3Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "profilAngajat.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Proiect v2.0 - Copy\\Angajati\\Angajati\\Ferestre Angajati\\profilAngajat.xaml.cs",
-              "RelativeDocumentMoniker": "Angajati\\Ferestre Angajati\\profilAngajat.xaml.cs",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Proiect v2.0 - Copy\\Angajati\\Angajati\\Ferestre Angajati\\profilAngajat.xaml.cs",
-              "RelativeToolTip": "Angajati\\Ferestre Angajati\\profilAngajat.xaml.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAkwCwAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T10:49:44.781Z",
+              "Title": "DespreNoi.xaml",
+              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Proiect v2.0 - Copy\\Angajati\\Angajati\\Ferestre Angajati\\DespreNoi.xaml",
+              "RelativeDocumentMoniker": "Angajati\\Ferestre Angajati\\DespreNoi.xaml",
+              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Proiect v2.0 - Copy\\Angajati\\Angajati\\Ferestre Angajati\\DespreNoi.xaml",
+              "RelativeToolTip": "Angajati\\Ferestre Angajati\\DespreNoi.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-04T19:15:30.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "firstMenu.xaml",
+              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Proiect v2.0 - Copy\\Angajati\\Angajati\\Ferestre Angajati\\firstMenu.xaml",
+              "RelativeDocumentMoniker": "Angajati\\Ferestre Angajati\\firstMenu.xaml",
+              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Proiect v2.0 - Copy\\Angajati\\Angajati\\Ferestre Angajati\\firstMenu.xaml",
+              "RelativeToolTip": "Angajati\\Ferestre Angajati\\firstMenu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-04T19:12:47.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "profilAngajat.xaml",
               "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Proiect v2.0 - Copy\\Angajati\\Angajati\\Ferestre Angajati\\profilAngajat.xaml",
               "RelativeDocumentMoniker": "Angajati\\Ferestre Angajati\\profilAngajat.xaml",
               "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Proiect v2.0 - Copy\\Angajati\\Angajati\\Ferestre Angajati\\profilAngajat.xaml",
               "RelativeToolTip": "Angajati\\Ferestre Angajati\\profilAngajat.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-02T10:49:25.263Z",
+              "WhenOpened": "2024-11-04T19:05:24.883Z",
               "EditorCaption": ""
             }
           ]

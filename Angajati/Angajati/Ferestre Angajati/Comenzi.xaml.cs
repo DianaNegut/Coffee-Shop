@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Angajati.Message_Box;
+using System;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Angajati.Message_Box;
 
 namespace Angajati.Ferestre_Angajati
 {
@@ -82,7 +84,9 @@ namespace Angajati.Ferestre_Angajati
                     }
                     else
                     {
-                        MessageBox.Show("ID-ul comenzii nu este valid.");
+                        Error error = new Error();
+                        error.SetErrorMessage("Numarul comenzii este invalid!");
+                        error.Show();
                     }
                 }
             }

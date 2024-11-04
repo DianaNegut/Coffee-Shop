@@ -1,11 +1,11 @@
-﻿<Window x:Class="Angajati.Message_Box.Error"
+﻿<Window x:Class="Angajati.Message_Box.Message"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Error"
-        Height="200" Width="400" 
+        Title="Message"
+        Height="180" Width="400" 
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Topmost="True"
@@ -26,63 +26,54 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <!-- Row for the image -->
             <RowDefinition Height="Auto"/>
-            <!-- Row for the title -->
             <RowDefinition Height="2"/>
-            <!-- Row for the separator line -->
             <RowDefinition Height="Auto"/>
-            <!-- Row for the border -->
             <RowDefinition Height="Auto"/>
-            <!-- Row for the error message -->
             <RowDefinition Height="Auto"/>
-            <!-- Row for the buttons -->
         </Grid.RowDefinitions>
 
-        <!-- Warning icon on the left side -->
-        <Image Source="/Images/eroare.png"
+        <!-- Icon on the left side -->
+        <Image Source="/Images/succes.png"
                Width="50"
                Height="36"
                VerticalAlignment="Top"
                HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="2,2,0,0" Grid.Row="0"/>
 
-        <!-- Warning Title -->
+        <!-- Title -->
         <TextBlock Grid.Column="1" 
                    FontSize="18"
                    FontWeight="Bold"
-                   Text="Eroare"
-                   Foreground="Red"
+                   Text="Succes!"
+                   Foreground="Green"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Left"
                    Margin="61,10,0,0"/>
 
         <Border Grid.Row="2" Grid.Column="1"
-                BorderBrush="Orange"
+                BorderBrush="Blue"
                 BorderThickness="0,1,0,0"
                 Margin="-15,5,0,10"/>
 
-        <!-- Error Message Content -->
-        <TextBlock x:Name="lblErrorMessage"
-           Grid.Row="3" Grid.Column="1"
-           Margin="0,10,0,0" 
-           TextAlignment="Left"
-           VerticalAlignment="Top"
-           Foreground="Black"
-           FontSize="16" 
-           TextWrapping="Wrap"
-           Height="50" 
-           Grid.RowSpan="2"/>
-
+        <!-- Message Content -->
+        <TextBlock x:Name="lblMessageContent"
+                   Grid.Row="3" Grid.Column="1"
+                   Margin="0,5,0,0"
+                   TextAlignment="Left"
+                   VerticalAlignment="Top"
+                   Foreground="Black"
+                   FontSize="14"
+                   TextWrapping="Wrap" Height="29" Grid.RowSpan="2"/>
 
         <!-- Button panel at the bottom -->
-        <StackPanel Grid.Row="7" Grid.Column="1"
+        <StackPanel Grid.Row="5" Grid.Column="1"
                     Orientation="Horizontal"
                     HorizontalAlignment="Right">
             <Button Content="OK"
                     Width="80"
                     Height="30"
-                    Background="#D70040"
-                    Foreground="White" Click="Button_Click_1"/>
+                    Background="Green"
+                    Foreground="White" Click="Button_Click_OK"/>
             <Button Content="Cancel"
                     Width="80"
                     Height="30"

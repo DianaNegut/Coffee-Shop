@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Angajati.Message_Box;
 
 namespace Angajati.Login
 {
@@ -50,6 +51,9 @@ namespace Angajati.Login
             {
                 //token invalid
                 //generare eroare
+                Error err = new Error();
+                err.SetErrorMessage("Token-ul este invalid!");
+                err.Show();
                 Forgot_Password fp = new Forgot_Password();
                 this.Hide();
                 fp.Show();

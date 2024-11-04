@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml.Linq;
+using Angajati.Message_Box;
 
 namespace Angajati.Login
 {
@@ -70,22 +71,28 @@ namespace Angajati.Login
         {
             if (IsEmailInDatabase(txtEmail.Text))
             {
+                Message m = new Message();
+                m.SetErrorMessage("Token trimis cu succes!");
+                m.Show();
             TokenGenerator token= new TokenGenerator();
             string recipientEmail = txtEmail.Text;
             SendTokenByEmail(recipientEmail, token);
             }
             else
             {
-                //eroare nu e in baza de date!!!
-                Console.WriteLine($"eroare nu e in baza de date!!!!");
+                Error eroare = new Error();
+                eroare.SetErrorMessage("Emailul nu se afla in baza de date a Cafenelei!");
+                eroare.Show();
+
+   
 
             }
         }
 
         private void SendTokenByEmail(string recipientEmail, TokenGenerator token)
         {
-            string senderEmail = "preturi.alerta@gmail.com";
-            string senderPassword = "twcj qmgg ourc ncdh";
+            string senderEmail = "scriptcafe757@gmail.com";
+            string senderPassword = "lvkv xqfz yyya ulut";
             token.GenerateToken();
             string code = token.GetToken();
             MailMessage mail = new MailMessage();

@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Angajati.Message_Box;
+using Angajati.Plata;
 
 namespace Angajati
 {
@@ -121,6 +122,7 @@ namespace Angajati
 
         private void Button_Click_Facebook(object sender, RoutedEventArgs e)
         {
+
             System.Diagnostics.Process.Start(new ProcessStartInfo
             {
                 FileName = "https://www.facebook.com/dianamihaela.negut/",

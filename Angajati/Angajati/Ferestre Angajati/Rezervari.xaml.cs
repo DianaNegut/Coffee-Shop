@@ -35,40 +35,28 @@ namespace Angajati
         {
             RezervariDisponibile.Clear();
 
-            using (var adapter = new Coffee_ShoppDataSetTableAdapters.RezervariTableAdapter())
+            using (var context = new CoffeeShopDataContext())
             {
-                var dataTable = adapter.GetData();
+                var rezervariAzi = from rezervare in context.Rezervaris
+                                   where rezervare.DataRezervare == DateTime.Now.Date && rezervare.IDAngajat == null
+                                   select rezervare;
 
-                foreach (var row in dataTable)
+                foreach (var rezervare in rezervariAzi)
                 {
-                    DateTime DataRezervare = (DateTime)row["DataRezervare"];
-                    var idAngajatValue = row["IDAngajat"];
-                    int? idAngajat = null;
-                    int nrLocuri = Convert.ToInt32(row["NrLocuri"]);
-                   
-                    string OraRezervare = row["Ora"].ToString();
-
-                    if (idAngajatValue != DBNull.Value)
+                    RezervariDisponibile.Add(new Rezervare
                     {
-                        idAngajat = Convert.ToInt32(idAngajatValue);
-                    }
-                    if (idAngajat == null && DataRezervare.Date == DateTime.Now.Date)
-                    {
-                        RezervariDisponibile.Add(new Rezervare
-                        {
-                            IdRezervare = row["IDRezervare"].ToString(),
-                            DataRezervare = DataRezervare,
-                            OraRezervare= OraRezervare,
-                            NumarLocuri = nrLocuri
-
-                        });
-                    }
+                        IdRezervare = rezervare.IDRezervare.ToString(),
+                        DataRezervare = rezervare.DataRezervare ?? DateTime.MinValue,
+                        OraRezervare = rezervare.Ora,
+                        NumarLocuri = rezervare.NrLocuri.HasValue ? rezervare.NrLocuri.Value : 0
+                    });
                 }
             }
 
             NoReservationsPanel.Visibility = RezervariDisponibile.Count == 0 ? Visibility.Visible : Visibility.Collapsed;
             RezervariListView.Visibility = RezervariDisponibile.Count == 0 ? Visibility.Collapsed : Visibility.Visible;
         }
+
 
         private void home_Click(object sender, RoutedEventArgs e)
         {
@@ -119,7 +107,7 @@ namespace Angajati
 
         private void comenzi_Click(object sender, RoutedEventArgs e)
         {
-            Comenzi c = new Comenzi(this.email);
+            Orders c = new Orders(this.email);
             this.Hide();
             c.Show();
         }

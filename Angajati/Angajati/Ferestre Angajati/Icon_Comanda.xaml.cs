@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Angajati.Message_Box;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,53 +35,87 @@ namespace Angajati.Ferestre_Angajati
         }
         private void PopulareFereastra(object sender, RoutedEventArgs e)
         {
-
-            using (var adapter = new Coffee_ShoppDataSetTableAdapters.ComenziTableAdapter())
+            try
             {
-
-                try
+                using (var context = new CoffeeShopDataContext()) 
                 {
-                    var queriesAdapter = new Coffee_ShoppDataSetTableAdapters.QueriesTableAdapter();
-                    
-                   
-                    string idClient = queriesAdapter.GetClientNameByOrderId(this.idComanda).ToString();
-                    Nume_Client.Text = idClient;
-                    Data.Text = this.dataComanda.ToString();
-                    Numar_Comanda.Text = this.idComanda.ToString();
+                    var order = (from o in context.Comenzis
+                                 where o.IDComanda == this.idComanda
+                                 select o).FirstOrDefault();
 
-                    
+                    if (order != null)
+                    {
+                        string idClient = (from c in context.Clients
+                                           where c.IDClient == order.IDClient
+                                           select c.Nume).FirstOrDefault();
+                        Nume_Client.Text = idClient;
+                        Data.Text = order.DataComanda.ToString();
+                        Numar_Comanda.Text = order.IDComanda.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Comanda nu a fost găsită.");
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"A apărut o eroare: {ex.Message}");
-                }
-
             }
-             
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show($"A apărut o eroare: {ex.Message}");
+            }
         }
+
 
         public void ButtonFinalizareComanda_Click(object sender, RoutedEventArgs e)
         {
-            using (var adapter = new Coffee_ShoppDataSetTableAdapters.ComenziTableAdapter())
+            try
             {
+                using (var context = new CoffeeShopDataContext())
+                {
+                    var employee = (from em in context.Angajats
+                                    where em.Email == this.email
+                                    select em).FirstOrDefault();
 
-                    try
+                    if (employee != null)
                     {
-                        var queriesAdapter = new Coffee_ShoppDataSetTableAdapters.QueriesTableAdapter();
+                        int idAngajat = employee.IDAngajat;
 
-                        int idAngajat = Convert.ToInt32(queriesAdapter.GetEmployeeIdByEmail(this.email));
-                        queriesAdapter.UpdateIDAngajatByIdComanda(idAngajat, this.idComanda);
+                        var order = (from o in context.Comenzis
+                                     where o.IDComanda == this.idComanda
+                                     select o).FirstOrDefault();
 
-                        MessageBox.Show("Comanda a fost finalizată cu succes!");
+                        if (order != null)
+                        {
+                            order.IDAngajat = idAngajat;
+                            context.SubmitChanges();
+                            Message m = new Message();
+                            m.SetErrorMessage("Comanda a fost finalizată cu succes!");
+                            m.Show();
+                        }
+                        else
+                        {
+                            Error m = new Error();
+                            m.SetErrorMessage("Comanda nu a fost găsită.");
+                            m.Show();
+                            
+                        }
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show($"A apărut o eroare: {ex.Message}");
+                        Error m = new Error();
+                        m.SetErrorMessage("Angajatul nu a fost găsit.");
+                        m.Show();
+                        
                     }
-                
+                }
+            }
+            catch (Exception ex)
+            {
+                Error m = new Error();
+                m.SetErrorMessage($"A apărut o eroare: {ex.Message}");
+                m.Show();
             }
         }
+
 
         private List<Cafele> GetProduseComanda()
         {

@@ -5,18 +5,19 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Angajati.Message_Box;
+using System.Linq;
 
 namespace Angajati.Ferestre_Angajati
 {
     /// <summary>
-    /// Interaction logic for Comenzi.xaml
+    /// Interaction logic for Orders.xaml
     /// </summary>
-    public partial class Comenzi : Window
+    public partial class Orders : Window
     {
         private string email;
         public ObservableCollection<Comanda> ComenziDisponibile { get; set; } = new ObservableCollection<Comanda>();
 
-        public Comenzi(string email)
+        public Orders(string email)
         {
             this.email = email;
             InitializeComponent();
@@ -31,66 +32,58 @@ namespace Angajati.Ferestre_Angajati
 
         private void IncarcaComenziDinBazaDeDate()
         {
-            // Clear any existing orders
             ComenziDisponibile.Clear();
-
-            using (var adapter = new Coffee_ShoppDataSetTableAdapters.ComenziTableAdapter())
+            using (var context = new CoffeeShopDataContext())
             {
-                var dataTable = adapter.GetData();
+                var comenziAzi = context.Comenzis
+                                        .Where(comanda => comanda.DataComanda == DateTime.Now.Date
+                                                          && comanda.IDAngajat == null);
 
-                foreach (var row in dataTable)
+                foreach (var comanda in comenziAzi)
                 {
-                    DateTime dataComanda = (DateTime)row["DataComanda"];
-                    var idAngajatValue = row["IDAngajat"];
-                    var pretComanda = row["Pret"];
-                    float pretComandaFloat = Convert.ToSingle(pretComanda);
-                    int? idAngajat = null;
-
-                    if (idAngajatValue != DBNull.Value)
+                    ComenziDisponibile.Add(new Comanda
                     {
-                        idAngajat = Convert.ToInt32(idAngajatValue);
-                    }
-
-                    // Only add today's orders assigned to an employee
-                    if (idAngajat == null && dataComanda.Date == DateTime.Now.Date)
-                    {
-                        ComenziDisponibile.Add(new Comanda
-                        {
-                            IdComanda = row["IDComanda"].ToString(),
-                            DataComanda = dataComanda,
-                            PretComanda = pretComandaFloat
-                        });
-                    }
+                        IdComanda = comanda.IDComanda.ToString(),
+                        DataComanda = comanda.DataComanda.HasValue ? comanda.DataComanda.Value : DateTime.MinValue,
+                        PretComanda = (float)comanda.Pret
+                    });
                 }
             }
-
-            // Control the visibility of NoOrdersPanel based on the list content
             NoOrdersPanel.Visibility = ComenziDisponibile.Count == 0 ? Visibility.Visible : Visibility.Collapsed;
             OrdersListView.Visibility = ComenziDisponibile.Count == 0 ? Visibility.Collapsed : Visibility.Visible;
         }
 
+
+
+
         private void OnOrderItemClicked(object sender, MouseButtonEventArgs e)
         {
-            
             if (sender is FrameworkElement element)
             {
                 if (element.DataContext is Comanda comanda)
                 {
-                    string idComandaStr = comanda.IdComanda;
-                    if (int.TryParse(idComandaStr, out int idComandaInt))
+                    using (var context = new CoffeeShopDataContext())
                     {
-                        Icon_Comanda ic = new Icon_Comanda(idComandaInt, comanda.DataComanda, this.email);
-                        ic.Show();
-                    }
-                    else
-                    {
-                        Error error = new Error();
-                        error.SetErrorMessage("Numarul comenzii este invalid!");
-                        error.Show();
+                        var comandaDb = context.Comenzis
+    .FirstOrDefault(c => c.IDComanda.ToString() == comanda.IdComanda);
+
+
+                        if (comandaDb != null)
+                        {
+                            var ic = new Icon_Comanda(comandaDb.IDComanda, comandaDb.DataComanda ?? DateTime.MinValue, this.email);
+                            ic.Show();
+                        }
+                        else
+                        {
+                            var error = new Error();
+                            error.SetErrorMessage("Comanda nu a fost găsită!");
+                            error.Show();
+                        }
                     }
                 }
             }
         }
+
 
 
 
@@ -105,7 +98,7 @@ namespace Angajati.Ferestre_Angajati
         {
             
             this.Hide();
-            new Comenzi(this.email).Show();
+            new Orders(this.email).Show();
         }
 
         private void reservation_Click(object sender, RoutedEventArgs e)

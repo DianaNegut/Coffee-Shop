@@ -49,7 +49,7 @@
 
         <TextBlock HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" Text="Data:" FontSize="19" VerticalAlignment="Top" Width="89" Margin="28,136,0,0"/>
 
-        <TextBlock HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" FontSize="19"  Text="Numar locuri:" VerticalAlignment="Center" Width="137" Margin="28,0,0,0"/>
+        <TextBlock HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" FontSize="19"  Text="Număr locuri:" VerticalAlignment="Center" Width="137" Margin="28,0,0,0"/>
 
         <TextBlock x:Name="Numar_locuri" 
            HorizontalAlignment="Left" 
@@ -73,7 +73,7 @@
            Foreground="Black" 
            FontWeight="Bold" Width="85"/>
 
-        <TextBlock HorizontalAlignment="Left" FontSize="19" Height="30" Margin="-7,38,0,0" TextWrapping="Wrap" Text="       NUMAR REZERVARE:" 
+        <TextBlock HorizontalAlignment="Left" FontSize="19" Height="30" Margin="-7,38,0,0" TextWrapping="Wrap" Text="       NUMĂR REZERVARE:" 
                    Foreground="Black" 
          FontWeight="Bold" VerticalAlignment="Top" Width="333"/>
 
@@ -90,7 +90,7 @@
             </Button>
         </Grid>
 
-        <Button Content="Finalizata!" Style="{StaticResource Rezervarebutton}" Margin="130,332,100,10" Click="ButtonFinalizareRezervare_Click"/>
+        <Button Content="Finalizată!" Style="{StaticResource Rezervarebutton}" Margin="130,332,100,10" Click="ButtonFinalizareRezervare_Click"/>
         <Image Margin="28,214,286,62" Source="/Images/rezervare_terminata.png"/>
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Angajati.Message_Box;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,30 +30,37 @@ namespace Angajati.Ferestre_Angajati
         }
         private void PopulareFereastra()
         {
-            using (var adapter = new Coffee_ShoppDataSetTableAdapters.AngajatTableAdapter())
+            try
             {
-
-                try
+                using (var context = new CoffeeShopDataContext())
                 {
-                    var queriesAdapter = new Coffee_ShoppDataSetTableAdapters.QueriesTableAdapter();
                     Email.Text = this.email;
-                    Rol.Text = queriesAdapter.GetRolByEmail(this.email).ToString();
-                    var NumeResult = queriesAdapter.GetNumeByEmail(this.email);
-                    var PrenumeResult = queriesAdapter.GetPrenumeByEmail(this.email);
-                    string Nume = NumeResult != null ? NumeResult.ToString() : "N/A"; 
-                    string Prenume = PrenumeResult != null ? PrenumeResult.ToString() : "N/A";
-                    string tot = Nume +" "+ Prenume;
+
+                    var rol = context.Angajats
+                                     .Where(a => a.Email == this.email)
+                                     .Select(a => a.Rol)
+                                     .FirstOrDefault();
+
+                    Rol.Text = rol ?? "N/A";
+
+                    var angajat = context.Angajats
+                                         .Where(a => a.Email == this.email)
+                                         .FirstOrDefault();
+
+                    string Nume = angajat?.Nume ?? "N/A";
+                    string Prenume = angajat?.Prenume ?? "N/A";
+
+                    string tot = Nume + " " + Prenume;
                     this.Nume_Prenume.Text = tot;
-
-                   
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"A apărut o eroare: {ex.Message}");
-                }
-
+            }
+            catch (Exception ex)
+            {
+                Error er = new Error();
+                er.SetErrorMessage($"A apărut o eroare: {ex.Message}");
             }
         }
+
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -75,7 +83,7 @@ namespace Angajati.Ferestre_Angajati
 
         private void comenzi_Click(object sender, RoutedEventArgs e)
         {
-            Comenzi c = new Comenzi(this.email);
+            Orders c = new Orders(this.email);
             this.Hide();
             c.Show();
         }

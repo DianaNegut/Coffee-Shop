@@ -39,12 +39,12 @@
                  Text="" IsReadOnly="True" VerticalAlignment="Top" Width="147" Margin="155,126,0,0" Foreground="Black" 
          FontWeight="Bold"/>
 
-        <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" FontSize="15" Text="Continut comanda:" VerticalAlignment="Top" Width="137" Margin="23,167,0,0"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" FontSize="15" Text="Conținut comandă:" VerticalAlignment="Top" Width="137" Margin="23,167,0,0"/>
 
         <TextBox x:Name="Numar_Comanda" HorizontalAlignment="Left" Background="Transparent" Height="20" Margin="165,38,0,0" 
          TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.526,1.158" Foreground="Black" 
  FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Height="18" Margin="0,40,0,0" TextWrapping="Wrap" Text="       NUMAR COMANDA:" 
+        <TextBlock HorizontalAlignment="Left" Height="18" Margin="0,40,0,0" TextWrapping="Wrap" Text="       NUMĂR COMANDĂ:" 
                    Foreground="Black" 
          FontWeight="Bold" VerticalAlignment="Top" Width="193"/>
 
@@ -57,7 +57,7 @@
             <StackPanel Orientation="Horizontal" Margin="10,0,0,5" Grid.ColumnSpan="2">
                 <TextBlock Text="  Nume" FontWeight="Bold" Width="80" FontSize="14"/>
                 <TextBlock Text="Cantitate" FontWeight="Bold" Width="60" FontSize="14"/>
-                <TextBlock Text="        Pret" FontWeight="Bold" Width="80" FontSize="14"/>
+                <TextBlock Text="        Preț" FontWeight="Bold" Width="80" FontSize="14"/>
             </StackPanel>
 
             <!-- ListView-ul care conține elementele -->
@@ -86,7 +86,7 @@
             </Button>
         </Grid>
 
-        <Button Content="Finalizata!" Style="{StaticResource comandabutton}" Margin="165,332,165,10" Click="ButtonFinalizareComanda_Click"/>
+        <Button Content="Finalizată!" Style="{StaticResource comandabutton}" Margin="165,332,165,10" Click="ButtonFinalizareComanda_Click"/>
         <Image Margin="28,197,268,63" Source="/Images/comanda_terminata.png"/>
     </Grid>
 </Window>

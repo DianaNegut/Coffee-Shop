@@ -1,4 +1,4 @@
-﻿<Window x:Class="Angajati.Ferestre_Angajati.Comenzi"
+﻿<Window x:Class="Angajati.Ferestre_Angajati.Orders"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -202,8 +202,8 @@ BorderThickness="0,0,0,0"  Grid.ColumnSpan="2" Margin="97,0,97,0" Click="reserva
 
 
             <TextBlock Grid.Row="0"
-Grid.Column="1"
-Grid.ColumnSpan="2" HorizontalAlignment="Left" FontWeight="Bold" Foreground="#CDD7E0" FontFamily="Oswald" FontSize="27" Height="52" Margin="20,116,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="&#x9;     Preia o comanda!" VerticalAlignment="Top" Width="503">
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2" HorizontalAlignment="Left" FontWeight="Bold" Foreground="#CDD7E0" FontFamily="Oswald" FontSize="27" Height="52" Margin="20,116,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="&#x9;     Preia o comandă!" VerticalAlignment="Top" Width="503"> 
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect>
@@ -258,14 +258,14 @@ Grid.ColumnSpan="2" HorizontalAlignment="Left" FontWeight="Bold" Foreground="#CD
             <StackPanel>
                 <!-- StackPanel for "No Orders Available" message and image -->
                 <StackPanel x:Name="NoOrdersPanel" HorizontalAlignment="Center" Visibility="Collapsed">
-                    <TextBlock Text="Momentan nu sunt comenzi disponibile" 
+                    <TextBlock Text="Momentan nu sunt comenzi disponibile" Margin="0 20 0 0"
                    FontSize="36" 
                    Foreground="White" 
                    HorizontalAlignment="Center"/>
 
                     <!-- Image displayed when there are no orders -->
                     <Image Source="/Images/fericire.png" Width="150" Height="150" 
-               HorizontalAlignment="Center" Margin="0,10,0,0"/>
+               HorizontalAlignment="Center" Margin="0,50,0,0"/>
                 </StackPanel>
 
                 <!-- ScrollViewer and ListView for displaying orders -->

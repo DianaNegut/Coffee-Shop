@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Angajati.Message_Box;
 
 namespace Angajati.Login
 {
@@ -29,42 +30,37 @@ namespace Angajati.Login
         private void Button_Click_Validare(object sender, RoutedEventArgs e)
         {
             if (txtPassword.Password == txtPassword1.Password)
-            {   using (var adapter = new Coffee_ShoppDataSetTableAdapters.ClientTableAdapter())
+            {
+                using (var context = new CoffeeShopDataContext())
                 {
-                    Coffee_ShoppDataSet coffeeShopDataSet = new Coffee_ShoppDataSet();
+                    var client = context.Clients
+                        .FirstOrDefault(c => c.Email == this.email);
 
-                    // Completează dataset-ul cu datele din tabelul Client
-                    adapter.Fill(coffeeShopDataSet.Client);
-
-                    // Căutăm rândul cu emailul specificat
-                    var clientRows = coffeeShopDataSet.Client.Where(client => client.Email == this.email).ToList();
-
-                    if (clientRows.Count > 0)
+                    if (client != null)
                     {
-                        // Dacă am găsit un utilizator cu acest email, actualizăm parola
-                        var clientRow = clientRows[0];
-
-                        // Hashează parola nouă
                         string passwordHash = PasswordHasher.HashPassword(txtPassword.Password);
-
-                        // Actualizează parola
-                        clientRow.Parola = passwordHash;
-
-                        // Salvează modificările în baza de date
-                        adapter.Update(coffeeShopDataSet.Client);
-                        MessageBox.Show("Parola a fost actualizată cu succes!");
+                        client.Parola = passwordHash;
+                        context.SubmitChanges();
+                        Message mesaj = new Message();
+                        mesaj.SetErrorMessage("Parola a fost actualizată cu succes!");
+                        mesaj.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Nu există un utilizator cu acest email.");
+                        Error er = new Error();
+                        er.SetErrorMessage("Nu există un utilizator cu acest email.");
+                        er.Show();
                     }
                 }
             }
             else
             {
-
+                Error er = new Error();
+                er.SetErrorMessage("Parolele nu se potrivesc.");
+                er.Show();
             }
         }
+
 
         private void Button_Click_Back(object sender, RoutedEventArgs e)
         {

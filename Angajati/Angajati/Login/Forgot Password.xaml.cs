@@ -47,25 +47,17 @@ namespace Angajati.Login
         }
         private bool IsEmailInDatabase(string email)
         {
-            
-            using (var adapter = new Coffee_ShoppDataSetTableAdapters.ClientTableAdapter())
+            using (var context = new CoffeeShopDataContext())
             {
                 string trimmedEmail = email.Trim();
 
-                Coffee_ShoppDataSet coffeeShopDataSet = new Coffee_ShoppDataSet();
+                var client = context.Clients
+                                    .FirstOrDefault(c => c.Email == trimmedEmail);
 
-
-                adapter.Fill(coffeeShopDataSet.Client);
-
-
-
-                var client = coffeeShopDataSet.Client
-                    .FirstOrDefault(c => c.Email == trimmedEmail);
-
-
-                return client != null ? true : false;
+                return client != null;
             }
         }
+
 
         private void Button_Click_generare_cod(object sender, RoutedEventArgs e)
         {
@@ -83,9 +75,6 @@ namespace Angajati.Login
                 Error eroare = new Error();
                 eroare.SetErrorMessage("Emailul nu se afla in baza de date a Cafenelei!");
                 eroare.Show();
-
-   
-
             }
         }
 

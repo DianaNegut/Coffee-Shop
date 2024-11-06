@@ -22,7 +22,7 @@
             
             <StackPanel VerticalAlignment="Center">
                 <TextBlock Text="Sign Up" Style="{StaticResource titleText}"/>
-                <TextBlock Text="Contactati-ne pentru mai multe detalii!" Style="{StaticResource normalText}" Opacity="0.8" Margin="20 30"/>
+                <TextBlock Text="Contactați-ne pentru mai multe detalii!" Style="{StaticResource normalText}" Opacity="0.8" Margin="20 30"/>
                 <Button Content="Sign Up" Style="{StaticResource button}" Foreground="White" Click="Button_Click_1"/>
             </StackPanel>
         </Grid>
@@ -31,7 +31,7 @@
             <StackPanel VerticalAlignment="Center">
                 <TextBlock Text="Log In!" Style="{StaticResource titleText}" Foreground="#265828"/>
                 
-                <TextBlock Text="Introduceti datele dumneavoastra de conectare!" Style="{StaticResource normalText}" Foreground="#878787" Margin="0 10 0 15"/>
+                <TextBlock Text="Introduceți datele dumneavoastră de conectare!" Style="{StaticResource normalText}" Foreground="#878787" Margin="0 10 0 15"/>
                 <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="10">
                     <Grid Margin="7 9">
                         <Grid.ColumnDefinitions>
@@ -90,7 +90,7 @@
 
                 <Button Content="Log In" Click="Button_Click" Style="{StaticResource mainbutton}"/>
 
-                <TextBlock Text="Contactati-ne pe retelele de socializare!" Style="{StaticResource normalText}" Foreground="#265828" Margin="0 10 0 0"/>
+                <TextBlock Text="Contactați-ne pe rețelele de socializare!" Style="{StaticResource normalText}" Foreground="#265828" Margin="0 10 0 0"/>
                 <StackPanel Orientation="Horizontal" Margin="0 10" HorizontalAlignment="Center">
                     <Button Style="{StaticResource buttonCircle}" Click="Button_Click_Facebook">
                         <Image Source="/Images/Facebook.png" Width="30" Height="30"/>

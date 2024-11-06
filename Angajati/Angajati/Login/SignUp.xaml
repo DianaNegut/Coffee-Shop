@@ -21,7 +21,7 @@
         <Grid>
             
             <StackPanel VerticalAlignment="Center">
-                <TextBlock Text="Inregistrati-va!"  Foreground="White" Style="{StaticResource titleTextBlack}" RenderTransformOrigin="0.511,3.865" />
+                <TextBlock Text="Înregistrați-vă!"  Foreground="White" Style="{StaticResource titleTextBlack}" RenderTransformOrigin="0.511,3.865" />
                 <Button Content="Back"
                 Style="{StaticResource button}"
                 Foreground="White"
@@ -70,7 +70,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Text="Selectati data nasterii:" VerticalAlignment="Center" Grid.Column="0" Margin="5,5,5,5" />
+                        <TextBlock Text="Selectati data nașterii:" VerticalAlignment="Center" Grid.Column="0" Margin="5,5,5,5" />
 
                         <DatePicker x:Name="myDatePicker" Grid.Column="1" Width="200" VerticalAlignment="Center" 
             SelectedDateChanged="myDatePicker_SelectedDateChanged" />

@@ -51,7 +51,7 @@ namespace Angajati.Ferestre_Angajati
 
         private void comenzi_Click(object sender, RoutedEventArgs e)
         {
-            Comenzi c = new Comenzi(this.email);
+            Orders c = new Orders(this.email);
             this.Hide();
             c.Show();
         }

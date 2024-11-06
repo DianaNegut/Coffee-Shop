@@ -61,44 +61,36 @@ namespace Angajati
 
         private async Task<bool> IsEmailInDatabaseAsync(string email)
         {
-            using (var adapter = new Coffee_ShoppDataSetTableAdapters.ClientTableAdapter())
+            return await Task.Run(() =>
             {
-                string trimmedEmail = email.Trim();
+                using (var context = new CoffeeShopDataContext())
+                {
+                    string trimmedEmail = email.Trim();
 
-                Coffee_ShoppDataSet coffeeShopDataSet = new Coffee_ShoppDataSet();
+                    var client = context.Clients
+                        .FirstOrDefault(c => c.Email == trimmedEmail);
 
-               
-                adapter.Fill(coffeeShopDataSet.Client);
-
-                
-
-                var client = coffeeShopDataSet.Client
-                    .FirstOrDefault(c => c.Email == trimmedEmail);
-
-               
-                return client != null ? true : false; 
-            }
+                    return client != null;
+                }
+            });
         }
+
         private async Task<bool> IsUsernameInDatabaseAsync(string username)
         {
-            using (var adapter = new Coffee_ShoppDataSetTableAdapters.ClientTableAdapter())
+            return await Task.Run(() =>
             {
-                string trimmedUsername = username.Trim();
+                using (var context = new CoffeeShopDataContext())
+                {
+                    string trimmedUsername = username.Trim();
 
-                Coffee_ShoppDataSet coffeeShopDataSet = new Coffee_ShoppDataSet();
+                    var client = context.Clients
+                        .FirstOrDefault(c => c.Username == trimmedUsername);
 
-
-                adapter.Fill(coffeeShopDataSet.Client);
-
-
-
-                var client = coffeeShopDataSet.Client
-                    .FirstOrDefault(c => c.Username == trimmedUsername);
-
-
-                return client != null ? true : false;
-            }
+                    return client != null;
+                }
+            });
         }
+
         private async void txtUsername_TextChanged(object sender, TextChangedEventArgs e)
         {
             string username = txtUsername.Text;
@@ -160,49 +152,53 @@ namespace Angajati
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            using (var adapter = new Coffee_ShoppDataSetTableAdapters.ClientTableAdapter())
+            using (var context = new CoffeeShopDataContext())
             {
+                string username = txtUsername.Text.Trim();
+                string email = txtEmail.Text.Trim();
+                var existingClientByEmail = context.Clients
+                    .FirstOrDefault(c => c.Email == email);
 
-                if (textUsername.Visibility == Visibility.Visible && textEmail.Visibility == Visibility.Visible)
+                var existingClientByUsername = context.Clients
+                    .FirstOrDefault(c => c.Username == username);
+
+                if (existingClientByEmail != null && existingClientByUsername != null)
                 {
                     Error error = new Error();
                     error.SetErrorMessage("Username si email deja utilizate! Vă rugăm să \nintroduceți un alt username si alt email.");
                     error.Show();
                     return;
                 }
-                if (textEmail.Visibility == Visibility.Visible)
+
+                if (existingClientByEmail != null)
                 {
                     Error error = new Error();
                     error.SetErrorMessage("Email deja utilizat!\n Vă rugăm să introduceți un alt email.");
                     error.Show();
                     return;
                 }
-                if (textUsername.Visibility == Visibility.Visible)
+
+                if (existingClientByUsername != null)
                 {
                     Error error = new Error();
                     error.SetErrorMessage("Username deja utilizat! Vă rugăm să introduceți un alt username.");
                     error.Show();
                     return;
                 }
-
-                Coffee_ShoppDataSet coffeeShopDataSet = new Coffee_ShoppDataSet();
-                adapter.Fill(coffeeShopDataSet.Client);
-                var newClientRow = coffeeShopDataSet.Client.NewClientRow();
-                newClientRow.Username = txtUsername.Text;
-                string passwordHash = PasswordHasher.HashPassword(txtPassword.Password);
-                newClientRow.Parola = passwordHash;
-                newClientRow.Email = txtEmail.Text.Trim();
-                newClientRow.Nume = txtNume.Text.Trim();
-                newClientRow.Prenume = txtPrenume.Text.Trim();
-                newClientRow.DataNastere = myDatePicker.SelectedDate.Value;
-                coffeeShopDataSet.Client.AddClientRow(newClientRow);
-                adapter.Update(coffeeShopDataSet.Client);
-
+                var newClient = new Client
+                {
+                    Username = username,
+                    Parola = PasswordHasher.HashPassword(txtPassword.Password),
+                    Email = email,
+                    Nume = txtNume.Text.Trim(),
+                    Prenume = txtPrenume.Text.Trim(),
+                    DataNastere = myDatePicker.SelectedDate.Value
+                };
+                context.Clients.InsertOnSubmit(newClient);
+                context.SubmitChanges();
                 Message mesaj = new Message();
                 mesaj.SetErrorMessage("Contul a fost creat cu succes!");
                 mesaj.Show();
-
-
                 LoginPage lp = new LoginPage();
                 this.Hide();
                 lp.Show();

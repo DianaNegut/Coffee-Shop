@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Coffee_Shopp" Class="CoffeeShopDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=Coffee_Shopp;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="Angajati.Properties.Settings" SettingsPropertyName="Coffee_ShoppConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Angajat" Member="Angajats">
+    <Type Name="Angajat">
+      <Column Name="IDAngajat" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Prenume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DataNastere" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Parola" Type="System.String" DbType="VarChar(517)" CanBeNull="true" />
+      <Column Name="Rol" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+      <Column Name="NrTelefon" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="Angajat_Comenzi" Member="Comenzis" ThisKey="IDAngajat" OtherKey="IDAngajat" Type="Comenzi" />
+      <Association Name="Angajat_Rezervari" Member="Rezervaris" ThisKey="IDAngajat" OtherKey="IDAngajat" Type="Rezervari" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cafele" Member="Cafeles">
+    <Type Name="Cafele">
+      <Column Name="IDProdus" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Denumire" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ShoturiEspresso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TipLapte" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sirop" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Frisca" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Pret" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Cafele_DetaliiComenzi" Member="DetaliiComenzis" ThisKey="IDProdus" OtherKey="IDCafea" Type="DetaliiComenzi" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Client" Member="Clients">
+    <Type Name="Client">
+      <Column Name="IDClient" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Prenume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DataNastere" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Parola" Type="System.String" DbType="VarChar(517)" CanBeNull="true" />
+      <Association Name="Client_Comenzi" Member="Comenzis" ThisKey="IDClient" OtherKey="IDClient" Type="Comenzi" />
+      <Association Name="Client_Rezervari" Member="Rezervaris" ThisKey="IDClient" OtherKey="IDClient" Type="Rezervari" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comenzi" Member="Comenzis">
+    <Type Name="Comenzi">
+      <Column Name="IDComanda" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDClient" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDAngajat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DataComanda" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ModalitatePlata" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Pret" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Association Name="Comenzi_DetaliiComenzi" Member="DetaliiComenzis" ThisKey="IDComanda" OtherKey="IDComanda" Type="DetaliiComenzi" />
+      <Association Name="Angajat_Comenzi" Member="Angajat" ThisKey="IDAngajat" OtherKey="IDAngajat" Type="Angajat" IsForeignKey="true" />
+      <Association Name="Client_Comenzi" Member="Client" ThisKey="IDClient" OtherKey="IDClient" Type="Client" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DetaliiComenzi" Member="DetaliiComenzis">
+    <Type Name="DetaliiComenzi">
+      <Column Name="IDDetaliiComanda" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDComanda" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDCafea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDMasa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cantitate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NrPersoane" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Cafele_DetaliiComenzi" Member="Cafele" ThisKey="IDCafea" OtherKey="IDProdus" Type="Cafele" IsForeignKey="true" />
+      <Association Name="Comenzi_DetaliiComenzi" Member="Comenzi" ThisKey="IDComanda" OtherKey="IDComanda" Type="Comenzi" IsForeignKey="true" />
+      <Association Name="Mese_DetaliiComenzi" Member="Mese" ThisKey="IDMasa" OtherKey="IDMasa" Type="Mese" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mese" Member="Meses">
+    <Type Name="Mese">
+      <Column Name="IDMasa" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataRezervare" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NumarLocuriDisponibile" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OraRezervare" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Association Name="Mese_DetaliiComenzi" Member="DetaliiComenzis" ThisKey="IDMasa" OtherKey="IDMasa" Type="DetaliiComenzi" />
+      <Association Name="Mese_Rezervari" Member="Rezervaris" ThisKey="IDMasa" OtherKey="IDMasa" Type="Rezervari" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Produse" Member="Produses">
+    <Type Name="Produse">
+      <Column Name="IDProdus" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Denumire" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Stoc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Pret" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rezervari" Member="Rezervaris">
+    <Type Name="Rezervari">
+      <Column Name="IDRezervare" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IDClient" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDAngajat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDMasa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DataRezervare" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NrLocuri" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ora" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Association Name="Angajat_Rezervari" Member="Angajat" ThisKey="IDAngajat" OtherKey="IDAngajat" Type="Angajat" IsForeignKey="true" />
+      <Association Name="Client_Rezervari" Member="Client" ThisKey="IDClient" OtherKey="IDClient" Type="Client" IsForeignKey="true" />
+      <Association Name="Mese_Rezervari" Member="Mese" ThisKey="IDMasa" OtherKey="IDMasa" Type="Mese" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetClientNameByOrderId" Method="GetClientNameByOrderId">
+    <Parameter Name="IDComanda" Parameter="iDComanda" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetClientNameByOrderIdResult">
+      <Column Name="Nume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Prenume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetClientNameByReservationId" Method="GetClientNameByReservationId">
+    <Parameter Name="IDRezervare" Parameter="iDRezervare" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetClientNameByReservationIdResult">
+      <Column Name="Nume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Prenume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetEmployeeIdByEmail" Method="GetEmployeeIdByEmail">
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(30)" />
+    <ElementType Name="GetEmployeeIdByEmailResult">
+      <Column Name="IDAngajat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetNrLocuriByIdRezervare" Method="GetNrLocuriByIdRezervare">
+    <Parameter Name="IDRezervare" Parameter="iDRezervare" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetNrLocuriByIdRezervareResult">
+      <Column Name="NrLocuri" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetNumeByEmail" Method="GetNumeByEmail">
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetNumeByEmailResult">
+      <Column Name="Nume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetNumePrenumeByEmail" Method="GetNumePrenumeByEmail">
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetNumePrenumeByEmailResult">
+      <Column Name="Nume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Prenume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetPrenumeByEmail" Method="GetPrenumeByEmail">
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetPrenumeByEmailResult">
+      <Column Name="Prenume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetRolByEmail" Method="GetRolByEmail">
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetRolByEmailResult">
+      <Column Name="Rol" Type="System.String" DbType="NVarChar(8)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UpdateIDAngajatByIdComanda" Method="UpdateIDAngajatByIdComanda">
+    <Parameter Name="IDAngajat" Parameter="iDAngajat" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IDComanda" Parameter="iDComanda" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateIDAngajatByIdRezervare" Method="UpdateIDAngajatByIdRezervare">
+    <Parameter Name="IDAngajat" Parameter="iDAngajat" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IDRezervare" Parameter="iDRezervare" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

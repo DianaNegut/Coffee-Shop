@@ -72,39 +72,35 @@ namespace Angajati
             string password = txtPassword.Password;
             string passwordHash = PasswordHasher.HashPassword(password);
 
-            Coffee_ShoppDataSet coffeeShopDataSet = new Coffee_ShoppDataSet();
-            using (var clientAdapter = new Coffee_ShoppDataSetTableAdapters.ClientTableAdapter())
+            using (var context = new CoffeeShopDataContext())
             {
-                clientAdapter.Fill(coffeeShopDataSet.Client);
-            }
-            using (var employeeAdapter = new Coffee_ShoppDataSetTableAdapters.AngajatTableAdapter())
-            {
-                employeeAdapter.Fill(coffeeShopDataSet.Angajat);
-            }
-            var clientUser = coffeeShopDataSet.Client
-                .FirstOrDefault(c => c.Email == email && c.Parola == passwordHash);
-            var employeeUser = coffeeShopDataSet.Angajat
-                .FirstOrDefault(a => a.Email == email && a.Parola == passwordHash);
-            if (clientUser != null)
-            {
-                //aici pagina Dariei
-                //ClientiPage clientiPage = new ClientiPage(txtEmail.Text);
-                //clientiPage.Show();
-                this.Close();
-            }
-            else if (employeeUser != null)
-            {
-                firstMenu firstPageMenu = new firstMenu(txtEmail.Text);
-                firstPageMenu.Show();
-                this.Close();
-            }
-            else
-            {
-                Error error = new Error();
-                error.SetErrorMessage("Emailul sau parola sunt incorecte!");
-                error.Show();
+                var clientUser = context.Clients
+                    .FirstOrDefault(c => c.Email == email && c.Parola == passwordHash);
+                var employeeUser = context.Angajats
+                    .FirstOrDefault(a => a.Email == email && a.Parola == passwordHash);
+
+                if (clientUser != null)
+                {
+                    // Aici pagina clientului
+                    //ClientiPage clientiPage = new ClientiPage(txtEmail.Text);
+                    //clientiPage.Show();
+                    this.Close();
+                }
+                else if (employeeUser != null)
+                {
+                    firstMenu firstPageMenu = new firstMenu(txtEmail.Text);
+                    firstPageMenu.Show();
+                    this.Close();
+                }
+                else
+                {
+                    Error error = new Error();
+                    error.SetErrorMessage("Emailul sau parola sunt incorecte!");
+                    error.Show();
+                }
             }
         }
+
 
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)

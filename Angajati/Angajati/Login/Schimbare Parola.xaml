@@ -20,7 +20,7 @@
 
         <Grid>
             <StackPanel VerticalAlignment="Center">
-                <TextBlock Text="Ati uitat parola?" Foreground="White" Style="{StaticResource titleTextBlack}" RenderTransformOrigin="0.511,3.865" Height="53"/>
+                <TextBlock Text="Ați uitat parola?" Foreground="White" Style="{StaticResource titleTextBlack}" RenderTransformOrigin="0.511,3.865" Height="53"/>
                 <Button Content="Back"
                     Style="{StaticResource button}"
                     Foreground="White"
@@ -31,7 +31,7 @@
         </Grid>
         <Border Background="#ffffff" Grid.Column="1" CornerRadius="0 10 10 0">
             <StackPanel VerticalAlignment="Center">
-                <TextBlock Text="Introduceti noua parola!" 
+                <TextBlock Text="Introduceți noua parola!" 
    Style="{StaticResource titleText}" 
    Foreground="#0f2310" />
 
@@ -54,14 +54,14 @@
                             <ColumnDefinition Width="auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Row="0" Grid.Column="0"   Text="Reintroduceti parola:" VerticalAlignment="Center" Margin="5" />
+                        <TextBlock Grid.Row="0" Grid.Column="0"   Text="Reintroduceți parola:" VerticalAlignment="Center" Margin="5" />
                         <TextBlock x:Name="textPassword1"  Text="Password" Style="{StaticResource textHint}"/>
                         <PasswordBox x:Name="txtPassword1" Style="{StaticResource textBox}" Grid.Column="1" Margin="10,0,0,0" />
 
                     </Grid>
 
                 </Border>
-                <Button Content="Valideaza!" 
+                <Button Content="Validează!" 
                     Style="{StaticResource mainbutton}" 
                     Margin="70,20,70,0" HorizontalAlignment="Center" Click="Button_Click_Validare" />
             </StackPanel>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Angajati.Message_Box;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,57 +34,96 @@ namespace Angajati.Ferestre_Angajati
         }
         private void PopulareFereastra(object sender, RoutedEventArgs e)
         {
-
-            using (var adapter = new Coffee_ShoppDataSetTableAdapters.ComenziTableAdapter())
+            try
             {
-
-                try
+                using (var context = new CoffeeShopDataContext())
                 {
-                    var queriesAdapter = new Coffee_ShoppDataSetTableAdapters.QueriesTableAdapter();
+                    var reservation = (from r in context.Rezervaris
+                                       where r.IDRezervare == this.idRezervare
+                                       select r).FirstOrDefault();
 
+                    if (reservation != null)
+                    {
+                        var client = (from c in context.Clients
+                                      where c.IDClient == reservation.IDClient
+                                      select c).FirstOrDefault();
 
-                    string idClient = queriesAdapter.GetClientNameByReservationId(this.idRezervare).ToString();
-                    Nume_Client.Text = idClient;
-                    Data.Text = this.dataRezervare.ToString();
-                    Numar_Rezervare.Text = this.idRezervare.ToString();
-                    string nrLocuriValue = queriesAdapter.GetNrLocuriByIdRezervare(this.idRezervare).ToString();
-                    Numar_locuri.Text = nrLocuriValue;
+                        if (client != null)
+                        {
+                            Nume_Client.Text = client.Nume;
+                        }
+                        else
+                        {
+                            Error er = new Error();
+                            er.SetErrorMessage("Clientul nu a fost găsit.");
+                            er.Show();
+                        }
 
-
+                        Data.Text = reservation.DataRezervare.ToString();
+                        Numar_Rezervare.Text = this.idRezervare.ToString();
+                        Numar_locuri.Text = reservation.NrLocuri.ToString();
+                    }
+                    else
+                    {
+                        Error er = new Error();
+                        er.SetErrorMessage("Rezervarea nu a fost găsită.");
+                        er.Show();
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"A apărut o eroare: {ex.Message}");
-                }
-
             }
-
-
+            catch (Exception ex)
+            {
+                Error er = new Error();
+                er.SetErrorMessage($"A apărut o eroare: {ex.Message}");
+                er.Show();
+            }
         }
+
 
         private void ButtonFinalizareRezervare_Click(object sender, RoutedEventArgs e)
         {
-            using (var adapter = new Coffee_ShoppDataSetTableAdapters.ComenziTableAdapter())
-            {
-
-                try
+                using (var context = new CoffeeShopDataContext())
                 {
-                    var queriesAdapter = new Coffee_ShoppDataSetTableAdapters.QueriesTableAdapter();
+                    var employee = (from er in context.Angajats
+                                    where er.Email == this.email
+                                    select er).FirstOrDefault();
 
-                    int idAngajat = Convert.ToInt32(queriesAdapter.GetEmployeeIdByEmail(this.email));
-                    queriesAdapter.UpdateIDAngajatByIdRezervare(idAngajat, this.idRezervare);
+                    if (employee != null)
+                    {
+                        int idAngajat = employee.IDAngajat;
 
-                    MessageBox.Show("Rezervare a fost finalizată cu succes!");
+                        var reservation = (from r in context.Rezervaris
+                                           where r.IDRezervare == this.idRezervare
+                                           select r).FirstOrDefault();
+
+                        if (reservation != null)
+                        {
+                            reservation.IDAngajat = idAngajat;
+                            context.SubmitChanges();
+                            Message mes = new Message();
+                            mes.SetErrorMessage("Rezervare a fost finalizată cu succes!");
+                            mes.Show();
+                        }
+                        else
+                        {
+                            Error eroare = new Error();
+                            eroare.SetErrorMessage("Rezervarea nu a fost găsită.");
+                            eroare.Show();
+                        }
+                    }
+                    else
+                    {
+                        Error eroare = new Error();
+                        eroare.SetErrorMessage("Angajatul nu a fost găsit.");
+                        eroare.Show();
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"A apărut o eroare: {ex.Message}");
-                }
-
-            }
         }
+            
+        
 
-       
+
+
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {

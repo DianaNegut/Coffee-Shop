@@ -253,7 +253,7 @@ BorderThickness="0,0,0,0" Click="reservation_Click" Grid.ColumnSpan="2" Margin="
         <Border Grid.Column="0" Margin="42,170,73,78" Padding="10" CornerRadius="10">
             <StackPanel>
                 <StackPanel x:Name="NoReservationsPanel" HorizontalAlignment="Center" Visibility="Collapsed">
-                    <TextBlock Text="Momentan nu sunt rezervari disponibile" 
+                    <TextBlock Text="Momentan nu sunt rezervari disponibile" Margin="0 20 0 0"
                            FontSize="36" 
                            Foreground="White" 
                            HorizontalAlignment="Center"/>

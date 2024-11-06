@@ -51,6 +51,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -69,23 +70,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CoffeeShopDataSet.Designer.cs">
+    <Compile Include="CoffeeShop.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CoffeeShopDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Coffee_ShoppDataSet.cs">
-      <DependentUpon>Coffee_ShoppDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Coffee_ShoppDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Coffee_ShoppDataSet.xsd</DependentUpon>
+      <DependentUpon>CoffeeShop.dbml</DependentUpon>
     </Compile>
     <Compile Include="Ferestre Angajati\Cafele.cs" />
     <Compile Include="Ferestre Angajati\Comanda.cs" />
-    <Compile Include="Ferestre Angajati\Comenzi.xaml.cs">
-      <DependentUpon>Comenzi.xaml</DependentUpon>
+    <Compile Include="Ferestre Angajati\Orders.xaml.cs">
+      <DependentUpon>Orders.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ferestre Angajati\DespreNoi.xaml.cs">
       <DependentUpon>DespreNoi.xaml</DependentUpon>
@@ -104,7 +97,7 @@
     <Compile Include="Ferestre Angajati\Rezervari.xaml.cs">
       <DependentUpon>Rezervari.xaml</DependentUpon>
     </Compile>
-    <Page Include="Ferestre Angajati\Comenzi.xaml">
+    <Page Include="Ferestre Angajati\Orders.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,7 +155,7 @@
     <Compile Include="Message Box\Message.xaml.cs">
       <DependentUpon>Message.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PasswordHasher.cs" />
+    <Compile Include="Ferestre Angajati\PasswordHasher.cs" />
     <Compile Include="Login\Forgot Password.xaml.cs" />
     <Compile Include="Login\LoginPage.xaml.cs" />
     <Compile Include="Login\Resetare Parola.xaml.cs" />
@@ -214,27 +207,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="CoffeeShopDataSet.xsc">
-      <DependentUpon>CoffeeShopDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CoffeeShopDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CoffeeShopDataSet.Designer.cs</LastGenOutput>
+    <None Include="CoffeeShop.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CoffeeShop.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="CoffeeShopDataSet.xss">
-      <DependentUpon>CoffeeShopDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Coffee_ShoppDataSet.xsc">
-      <DependentUpon>Coffee_ShoppDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Coffee_ShoppDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Coffee_ShoppDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Coffee_ShoppDataSet.xss">
-      <DependentUpon>Coffee_ShoppDataSet.xsd</DependentUpon>
+    <None Include="CoffeeShop.dbml.layout">
+      <DependentUpon>CoffeeShop.dbml</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -317,6 +296,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\succes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\visa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" />

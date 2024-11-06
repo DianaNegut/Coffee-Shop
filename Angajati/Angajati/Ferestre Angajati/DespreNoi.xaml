@@ -105,7 +105,7 @@
 
                 <StackPanel>
                     <TextBlock Style="{StaticResource titleText}" Margin="-86,0,-22,270">
-            Povesteste-ne experienta ta
+            Povestește-ne experiența ta
             <LineBreak/>
             ca angajat la Script Caffe!
                     </TextBlock>

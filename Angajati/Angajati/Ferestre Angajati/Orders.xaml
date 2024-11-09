@@ -256,44 +256,41 @@ BorderThickness="0,0,0,0"  Grid.ColumnSpan="2" Margin="97,0,97,0" Click="reserva
         </Grid>
         <Border Grid.Column="0" Margin="42,170,73,78" Padding="10" CornerRadius="10">
             <StackPanel>
-                <!-- StackPanel for "No Orders Available" message and image -->
                 <StackPanel x:Name="NoOrdersPanel" HorizontalAlignment="Center" Visibility="Collapsed">
                     <TextBlock Text="Momentan nu sunt comenzi disponibile" Margin="0 20 0 0"
                    FontSize="36" 
                    Foreground="White" 
                    HorizontalAlignment="Center"/>
-
-                    <!-- Image displayed when there are no orders -->
                     <Image Source="/Images/fericire.png" Width="150" Height="150" 
                HorizontalAlignment="Center" Margin="0,50,0,0"/>
                 </StackPanel>
 
-                <!-- ScrollViewer and ListView for displaying orders -->
-                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="1,5,1,0">
-                    <ListView x:Name="OrdersListView" Background="Transparent" BorderThickness="0" Margin="7" 
-                  ItemsSource="{Binding ComenziDisponibile}" Width="1009">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid MouseLeftButtonDown="OnOrderItemClicked" Tag="{Binding IdComanda}">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-                                    <StackPanel Orientation="Vertical" Grid.Column="0">
-                                        <TextBlock FontSize="20" Foreground="White" Margin="0,0,10,0">
-                                <Run Text="Comanda: " FontWeight="Bold"/>
-                                <Run Text="{Binding IdComanda}"/>
-                                        </TextBlock>
-                                        <TextBlock FontSize="20" Foreground="White" Margin="0,0,10,0">
-                                <Run Text="Pret: " FontWeight="Bold"/>
-                                <Run Text="{Binding PretComanda}"/>
-                                        </TextBlock>
-                                    </StackPanel>
-                                </Grid>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </ScrollViewer>
+                <ListView x:Name="OrdersListView" Background="Transparent" BorderThickness="0" Margin="7" 
+                        ItemsSource="{Binding ComenziDisponibile}" Width="1009"
+                        ScrollViewer.VerticalScrollBarVisibility="Auto"
+                        ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="468"> 
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid MouseLeftButtonDown="OnOrderItemClicked" Tag="{Binding IdComanda}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Vertical" Grid.Column="0">
+                                    <TextBlock FontSize="20" Foreground="White" Margin="0,0,10,0">
+                        <Run Text="Comanda: " FontWeight="Bold"/>
+                        <Run Text="{Binding IdComanda}"/>
+                                    </TextBlock>
+                                    <TextBlock FontSize="20" Foreground="White" Margin="0,0,10,0">
+                        <Run Text="Pret: " FontWeight="Bold"/>
+                        <Run Text="{Binding PretComanda}"/>
+                                    </TextBlock>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
             </StackPanel>
 
 

@@ -53,7 +53,7 @@ namespace Angajati
                 }
             }
 
-            NoReservationsPanel.Visibility = RezervariDisponibile.Count == 0 ? Visibility.Visible : Visibility.Collapsed;
+            NoRezervariPanel.Visibility = RezervariDisponibile.Count == 0 ? Visibility.Visible : Visibility.Collapsed;
             RezervariListView.Visibility = RezervariDisponibile.Count == 0 ? Visibility.Collapsed : Visibility.Visible;
         }
 
@@ -66,8 +66,6 @@ namespace Angajati
         }
         private void OnRezervareItemClicked(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Item clicked!"); // Check if the click event is triggered
-
             if (sender is FrameworkElement element)
             {
                 if (element.DataContext is Rezervare rezervare)
@@ -76,7 +74,7 @@ namespace Angajati
                     if (int.TryParse(idRezervarestr, out int idRezervareInt))
                     {
                         Icon_Rezervare ic = new Icon_Rezervare(idRezervareInt, rezervare.DataRezervare, this.email);
-                        ic.Show(); // This should open the window
+                        ic.Show(); 
                     }
                     else
                     {

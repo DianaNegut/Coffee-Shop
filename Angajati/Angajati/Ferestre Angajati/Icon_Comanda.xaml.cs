@@ -22,6 +22,7 @@ namespace Angajati.Ferestre_Angajati
     {
         private int idComanda;
         private DateTime dataComanda;
+        public event EventHandler ComandaFinalizata;
         private string email;
         public Icon_Comanda(int idComanda, DateTime data, string email)
         {
@@ -29,7 +30,6 @@ namespace Angajati.Ferestre_Angajati
             this.email = email;
             Loaded += PopulareFereastra;
             ListViewProduse.ItemsSource = GetProduseComanda();
-
             this.dataComanda = data;
             this.idComanda = idComanda;
         }
@@ -37,7 +37,7 @@ namespace Angajati.Ferestre_Angajati
         {
             try
             {
-                using (var context = new CoffeeShopDataContext()) 
+                using (var context = new CoffeeShopDataContext())
                 {
                     var order = (from o in context.Comenzis
                                  where o.IDComanda == this.idComanda
@@ -48,6 +48,7 @@ namespace Angajati.Ferestre_Angajati
                         string idClient = (from c in context.Clients
                                            where c.IDClient == order.IDClient
                                            select c.Nume).FirstOrDefault();
+
                         Nume_Client.Text = idClient;
                         Data.Text = order.DataComanda.ToString();
                         Numar_Comanda.Text = order.IDComanda.ToString();
@@ -65,6 +66,7 @@ namespace Angajati.Ferestre_Angajati
         }
 
 
+
         public void ButtonFinalizareComanda_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -74,7 +76,6 @@ namespace Angajati.Ferestre_Angajati
                     var employee = (from em in context.Angajats
                                     where em.Email == this.email
                                     select em).FirstOrDefault();
-
                     if (employee != null)
                     {
                         int idAngajat = employee.IDAngajat;
@@ -82,21 +83,22 @@ namespace Angajati.Ferestre_Angajati
                         var order = (from o in context.Comenzis
                                      where o.IDComanda == this.idComanda
                                      select o).FirstOrDefault();
-
                         if (order != null)
                         {
                             order.IDAngajat = idAngajat;
                             context.SubmitChanges();
-                            Message m = new Message();
-                            m.SetErrorMessage("Comanda a fost finalizată cu succes!");
-                            m.Show();
+                            ComandaFinalizata?.Invoke(this, EventArgs.Empty);
+                            this.Close();
+                            Message mes = new Message();
+                            mes.SetErrorMessage("Comanda a fost finalizată cu succes!");
+                            mes.Show();
+                            
                         }
                         else
                         {
                             Error m = new Error();
                             m.SetErrorMessage("Comanda nu a fost găsită.");
                             m.Show();
-                            
                         }
                     }
                     else
@@ -104,7 +106,6 @@ namespace Angajati.Ferestre_Angajati
                         Error m = new Error();
                         m.SetErrorMessage("Angajatul nu a fost găsit.");
                         m.Show();
-                        
                     }
                 }
             }
@@ -115,6 +116,7 @@ namespace Angajati.Ferestre_Angajati
                 m.Show();
             }
         }
+
 
 
         private List<Cafele> GetProduseComanda()

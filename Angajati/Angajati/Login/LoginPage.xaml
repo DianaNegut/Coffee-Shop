@@ -53,7 +53,7 @@
                         </Grid.ColumnDefinitions>
                         <Image Source="/Images/Password.jpg" Height="20"/>
                         <TextBlock x:Name="textPassword" MouseDown="textPassword_MouseDown" Text="Password" Style="{StaticResource textHint}"/>
-                        <PasswordBox x:Name="txtPassword" PasswordChanged="txtPassword_PasswordChanged" Style="{StaticResource textBox}" />
+                        <PasswordBox x:Name="txtPassword" PasswordChanged="txtPassword_PasswordChanged" Style="{StaticResource passwordBox}" />
 
                     </Grid>
 

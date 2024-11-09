@@ -19,7 +19,7 @@
         </Border>
 
         <Grid>
-            
+
             <StackPanel VerticalAlignment="Center">
                 <TextBlock Text="Înregistrați-vă!"  Foreground="White" Style="{StaticResource titleTextBlack}" RenderTransformOrigin="0.511,3.865" />
                 <Button Content="Back"
@@ -72,8 +72,8 @@
 
                         <TextBlock Text="Selectati data nașterii:" VerticalAlignment="Center" Grid.Column="0" Margin="5,5,5,5" />
 
-                        <DatePicker x:Name="myDatePicker" Grid.Column="1" Width="200" VerticalAlignment="Center" 
-            SelectedDateChanged="myDatePicker_SelectedDateChanged" />
+                        <DatePicker x:Name="myDatePicker" Grid.Column="1" Width="200" VerticalAlignment="Top" 
+            SelectedDateChanged="myDatePicker_SelectedDateChanged" Margin="226,4,25,0" />
 
                     </Grid>
                 </Border>
@@ -105,7 +105,7 @@
 
                         <TextBox x:Name="txtEmail" Style="{StaticResource textBox}" TextChanged="txtEmail_TextChanged" Grid.Column="1" Margin="0, 0, 0, 0"/>
 
-                        
+
                         <TextBlock x:Name="errorTextBlockUsername" Text="" Foreground="Red" Margin="0, 5, 0, 0" Grid.ColumnSpan="2" Visibility="Collapsed" />
                     </Grid>
                 </Border>
@@ -118,8 +118,8 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Row="0" Grid.Column="0"   Text="Parola:" VerticalAlignment="Center" Margin="5" />
-                        <TextBlock x:Name="textPassword"  Text="Password" Style="{StaticResource textHint}"/>
-                        <PasswordBox x:Name="txtPassword" Style="{StaticResource textBox}" Grid.Column="1" Margin="10,0,0,0" />
+                        <TextBlock x:Name="textPassword" Style="{StaticResource textHint}"/>
+                        <PasswordBox x:Name="txtPassword" Style="{StaticResource passwordBox}" Grid.Column="1" Margin="10,0,0,0" />
 
                     </Grid>
 

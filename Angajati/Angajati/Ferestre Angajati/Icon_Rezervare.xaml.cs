@@ -22,6 +22,7 @@ namespace Angajati.Ferestre_Angajati
     {
         private int idRezervare;
         private DateTime dataRezervare;
+        public event EventHandler RezervareFinalizata;
         private string email;
         public Icon_Rezervare(int idRezervare, DateTime data, string email)
         {
@@ -82,45 +83,45 @@ namespace Angajati.Ferestre_Angajati
 
         private void ButtonFinalizareRezervare_Click(object sender, RoutedEventArgs e)
         {
-                using (var context = new CoffeeShopDataContext())
+            using (var context = new CoffeeShopDataContext())
+            {
+                var employee = (from er in context.Angajats
+                                where er.Email == this.email
+                                select er).FirstOrDefault();
+                if (employee != null)
                 {
-                    var employee = (from er in context.Angajats
-                                    where er.Email == this.email
-                                    select er).FirstOrDefault();
-
-                    if (employee != null)
+                    int idAngajat = employee.IDAngajat;
+                    var reservation = (from r in context.Rezervaris
+                                       where r.IDRezervare == this.idRezervare
+                                       select r).FirstOrDefault();
+                    if (reservation != null)
                     {
-                        int idAngajat = employee.IDAngajat;
-
-                        var reservation = (from r in context.Rezervaris
-                                           where r.IDRezervare == this.idRezervare
-                                           select r).FirstOrDefault();
-
-                        if (reservation != null)
-                        {
-                            reservation.IDAngajat = idAngajat;
-                            context.SubmitChanges();
-                            Message mes = new Message();
-                            mes.SetErrorMessage("Rezervare a fost finalizată cu succes!");
-                            mes.Show();
-                        }
-                        else
-                        {
-                            Error eroare = new Error();
-                            eroare.SetErrorMessage("Rezervarea nu a fost găsită.");
-                            eroare.Show();
-                        }
+                        reservation.IDAngajat = idAngajat;
+                        context.SubmitChanges();
+                        RezervareFinalizata?.Invoke(this, EventArgs.Empty);
+                        Message mes = new Message();
+                        this.Close();
+                        mes.SetErrorMessage("Rezervare a fost finalizată cu succes!");
+                        mes.Show();
                     }
                     else
                     {
                         Error eroare = new Error();
-                        eroare.SetErrorMessage("Angajatul nu a fost găsit.");
+                        eroare.SetErrorMessage("Rezervarea nu a fost găsită.");
                         eroare.Show();
                     }
                 }
+                else
+                {
+                    Error eroare = new Error();
+                    eroare.SetErrorMessage("Angajatul nu a fost găsit.");
+                    eroare.Show();
+                }
+            }
         }
-            
-        
+
+
+
 
 
 

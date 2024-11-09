@@ -62,16 +62,15 @@ namespace Angajati.Ferestre_Angajati
             {
                 if (element.DataContext is Comanda comanda)
                 {
-                    using (var context = new CoffeeShopDataContext())
+                    
                     {
-                        var comandaDb = context.Comenzis
-    .FirstOrDefault(c => c.IDComanda.ToString() == comanda.IdComanda);
-
-
-                        if (comandaDb != null)
+                        string idComandastr = comanda.IdComanda;
+                         if (int.TryParse(idComandastr, out int idComandaint))
                         {
-                            var ic = new Icon_Comanda(comandaDb.IDComanda, comandaDb.DataComanda ?? DateTime.MinValue, this.email);
+                            Icon_Comanda ic = new Icon_Comanda(idComandaint, comanda.DataComanda, this.email);
                             ic.Show();
+                            ic.ComandaFinalizata += OnComandaFinalizata;
+
                         }
                         else
                         {
@@ -84,6 +83,12 @@ namespace Angajati.Ferestre_Angajati
             }
         }
 
+
+        private void OnComandaFinalizata(object sender, EventArgs e)
+        {
+            IncarcaComenziDinBazaDeDate();
+            OrdersListView.ItemsSource = ComenziDisponibile;
+        }
 
 
 

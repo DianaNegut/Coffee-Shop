@@ -43,7 +43,7 @@
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Row="0" Grid.Column="0"   Text="Parola:" VerticalAlignment="Center" Margin="10" />
                         <TextBlock x:Name="textPassword"   Style="{StaticResource textHint}"/>
-                        <PasswordBox x:Name="txtPassword" Style="{StaticResource textBox}" Grid.Column="1" Margin="75,0,0,0" />
+                        <PasswordBox x:Name="txtPassword" Style="{StaticResource passwordBox}" Grid.Column="1" Margin="75,0,0,0" />
 
                     </Grid>
 
@@ -55,8 +55,8 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Row="0" Grid.Column="0"   Text="Reintroduceți parola:" VerticalAlignment="Center" Margin="5" />
-                        <TextBlock x:Name="textPassword1"  Text="Password" Style="{StaticResource textHint}"/>
-                        <PasswordBox x:Name="txtPassword1" Style="{StaticResource textBox}" Grid.Column="1" Margin="10,0,0,0" />
+                        <TextBlock x:Name="textPassword1" Style="{StaticResource textHint}"/>
+                        <PasswordBox x:Name="txtPassword1" Style="{StaticResource passwordBox}" Grid.Column="1" Margin="10,0,0,0" />
 
                     </Grid>
 

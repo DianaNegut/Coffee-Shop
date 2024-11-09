@@ -82,7 +82,7 @@
             </Button>
         </Grid>
 
-        <Button Content="Finalizată!" Style="{StaticResource comandabutton}" Margin="165,332,165,10" Click="ButtonFinalizareComanda_Click"/>
+        <Button Content="Finalizată!" Style="{StaticResource comandabutton}" Margin="165,390,175,10" Click="ButtonFinalizareComanda_Click"/>
         <Image Margin="10,197,284,63" Source="/Images/comanda_terminata.png"/>
     </Grid>
 </Window>

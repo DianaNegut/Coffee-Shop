@@ -74,7 +74,8 @@ namespace Angajati
                     if (int.TryParse(idRezervarestr, out int idRezervareInt))
                     {
                         Icon_Rezervare ic = new Icon_Rezervare(idRezervareInt, rezervare.DataRezervare, this.email);
-                        ic.Show(); 
+                        ic.RezervareFinalizata += OnRezervareFinalizata;
+                        ic.Show();
                     }
                     else
                     {
@@ -83,6 +84,13 @@ namespace Angajati
                 }
             }
         }
+        private void OnRezervareFinalizata(object sender, EventArgs e)
+        {
+            IncarcaRezervariDinBazaDeDate();
+            RezervariListView.ItemsSource = RezervariDisponibile;
+        }
+
+
 
         private void reservation_Click(object sender, RoutedEventArgs e)
         {

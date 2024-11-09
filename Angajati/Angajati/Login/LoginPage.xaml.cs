@@ -45,7 +45,22 @@ namespace Angajati
                 textEmail.Visibility = Visibility.Visible;
             }
         }
-        
+
+        private void ShowPassword_Checked(object sender, RoutedEventArgs e)
+        {
+            txtPassword.Visibility = Visibility.Collapsed;
+            txtPasswordVisible.Visibility = Visibility.Visible;
+            txtPasswordVisible.Text = txtPassword.Password;
+        }
+
+        private void ShowPassword_Unchecked(object sender, RoutedEventArgs e)
+        {
+            txtPasswordVisible.Visibility = Visibility.Collapsed;
+            txtPassword.Visibility = Visibility.Visible;
+            txtPassword.Password = txtPasswordVisible.Text;
+        }
+
+
         private void textPassword_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (!string.IsNullOrEmpty(txtPassword.Password) && txtPassword.Password.Length > 0)

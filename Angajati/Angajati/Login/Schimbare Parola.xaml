@@ -34,6 +34,21 @@
                 <TextBlock Text="Introduceți noua parola!" 
    Style="{StaticResource titleText}" 
    Foreground="#0f2310" />
+                <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="10" Height="50">
+                    <Grid Margin="7 9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Parola:" VerticalAlignment="Center" Margin="5" />
+                        <TextBox x:Name="textPassword" Style="{StaticResource textBox}" Grid.Column="1" Margin="75,0,100,0"/>
+                        <PasswordBox x:Name="txtPassword" Style="{StaticResource passwordBox}" Grid.Column="1" Margin="75,0,100,0" />
+                        <TextBox x:Name="txtPasswordVisible" Style="{StaticResource textBox}" Grid.Column="1" Margin="75,0,100,0" Visibility="Collapsed" />
+                        <CheckBox Content="Arată parola" x:Name="showPasswordCheckBox"
+                        Checked="ShowPassword_Checked" Unchecked="ShowPassword_Unchecked" 
+                        Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
+                    </Grid>
+                </Border>
 
                 <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="10" Height="50">
                     <Grid Margin="7 9">
@@ -41,26 +56,18 @@
                             <ColumnDefinition Width="auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Row="0" Grid.Column="0"   Text="Parola:" VerticalAlignment="Center" Margin="10" />
-                        <TextBlock x:Name="textPassword"   Style="{StaticResource textHint}"/>
-                        <PasswordBox x:Name="txtPassword" Style="{StaticResource passwordBox}" Grid.Column="1" Margin="75,0,0,0" />
-
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Reintroduceți parola:" VerticalAlignment="Center" Margin="5" />
+                        <TextBox x:Name="textPassword2" Style="{StaticResource textBox}" Grid.Column="1" Margin="75,0,100,0"/>
+                        <PasswordBox x:Name="txtPassword2" Style="{StaticResource passwordBox}" Grid.Column="1" Margin="10,0,100,0" />
+                        <TextBox x:Name="txtPasswordVisible2" Style="{StaticResource textBox}" Grid.Column="1" Margin="10,0,100,0" Visibility="Collapsed" />
+                        <CheckBox Content="Arată parola" x:Name="showPasswordCheckBox2"
+                        Checked="ShowPassword_Checked2" Unchecked="ShowPassword_Unchecked2" 
+                        Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
                     </Grid>
-
                 </Border>
-                <Border BorderThickness="1" BorderBrush="#acb0af" Margin="70 7" CornerRadius="10" Height="50">
-                    <Grid Margin="7 9">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Row="0" Grid.Column="0"   Text="Reintroduceți parola:" VerticalAlignment="Center" Margin="5" />
-                        <TextBlock x:Name="textPassword1" Style="{StaticResource textHint}"/>
-                        <PasswordBox x:Name="txtPassword1" Style="{StaticResource passwordBox}" Grid.Column="1" Margin="10,0,0,0" />
 
-                    </Grid>
 
-                </Border>
+                
                 <Button Content="Validează!" 
                     Style="{StaticResource mainbutton}" 
                     Margin="70,20,70,0" HorizontalAlignment="Center" Click="Button_Click_Validare" />

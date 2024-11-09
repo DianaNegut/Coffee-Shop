@@ -1,36 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\coffee-shop\\angajati\\angajati\\login\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\login\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SignUp.xaml",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Login\\SignUp.xaml",
-              "RelativeDocumentMoniker": "Angajati\\Login\\SignUp.xaml",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Login\\SignUp.xaml",
-              "RelativeToolTip": "Angajati\\Login\\SignUp.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-09T16:21:24.894Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

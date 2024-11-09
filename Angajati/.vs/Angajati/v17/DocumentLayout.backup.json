@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\login\\schimbare parola.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\coffee-shop\\angajati\\angajati\\login\\schimbare parola.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\login\\schimbare parola.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\coffee-shop\\angajati\\angajati\\login\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\login\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\coffee-shop\\angajati\\angajati\\login\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\login\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\coffee-shop\\angajati\\angajati\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\coffee-shop\\angajati\\angajati\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,55 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Schimbare Parola.xaml",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Login\\Schimbare Parola.xaml",
-              "RelativeDocumentMoniker": "Angajati\\Login\\Schimbare Parola.xaml",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Login\\Schimbare Parola.xaml",
-              "RelativeToolTip": "Angajati\\Login\\Schimbare Parola.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-09T16:20:27.113Z",
+              "DocumentIndex": 2,
+              "Title": "SignUp.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Login\\SignUp.xaml.cs",
+              "RelativeDocumentMoniker": "Angajati\\Login\\SignUp.xaml.cs",
+              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Login\\SignUp.xaml.cs",
+              "RelativeToolTip": "Angajati\\Login\\SignUp.xaml.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAowGIAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T17:14:10.097Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Schimbare Parola.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Login\\Schimbare Parola.xaml.cs",
+              "RelativeDocumentMoniker": "Angajati\\Login\\Schimbare Parola.xaml.cs",
+              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Login\\Schimbare Parola.xaml.cs",
+              "RelativeToolTip": "Angajati\\Login\\Schimbare Parola.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAD4vyEAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T17:14:04.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SignUp.xaml",
               "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Login\\SignUp.xaml",
               "RelativeDocumentMoniker": "Angajati\\Login\\SignUp.xaml",
               "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Login\\SignUp.xaml",
               "RelativeToolTip": "Angajati\\Login\\SignUp.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-09T16:19:56.741Z",
+              "WhenOpened": "2024-11-09T17:12:17.057Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\App.xaml",
-              "RelativeDocumentMoniker": "Angajati\\App.xaml",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\App.xaml",
-              "RelativeToolTip": "Angajati\\App.xaml",
+              "DocumentIndex": 0,
+              "Title": "Schimbare Parola.xaml",
+              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Login\\Schimbare Parola.xaml",
+              "RelativeDocumentMoniker": "Angajati\\Login\\Schimbare Parola.xaml",
+              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Login\\Schimbare Parola.xaml*",
+              "RelativeToolTip": "Angajati\\Login\\Schimbare Parola.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-09T15:52:40.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\App.config",
-              "RelativeDocumentMoniker": "Angajati\\App.config",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\App.config",
-              "RelativeToolTip": "Angajati\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-11-09T15:52:38.49Z",
+              "WhenOpened": "2024-11-09T17:11:53.977Z",
               "EditorCaption": ""
             }
           ]

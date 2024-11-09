@@ -29,7 +29,7 @@ namespace Angajati.Login
 
         private void Button_Click_Validare(object sender, RoutedEventArgs e)
         {
-            if (txtPassword.Password == txtPassword1.Password)
+            if (txtPassword.Password == txtPassword2.Password)
             {
                 using (var context = new CoffeeShopDataContext())
                 {
@@ -60,6 +60,37 @@ namespace Angajati.Login
                 er.Show();
             }
         }
+
+        private void ShowPassword_Checked(object sender, RoutedEventArgs e)
+        {
+            txtPassword.Visibility = Visibility.Collapsed;
+            txtPasswordVisible.Visibility = Visibility.Visible;
+            txtPasswordVisible.Text = txtPassword.Password;
+        }
+
+        private void ShowPassword_Unchecked(object sender, RoutedEventArgs e)
+        {
+            txtPasswordVisible.Visibility = Visibility.Collapsed;
+            txtPassword.Visibility = Visibility.Visible;
+            txtPassword.Password = txtPasswordVisible.Text;
+        }
+
+
+
+        private void ShowPassword_Checked2(object sender, RoutedEventArgs e)
+        {
+            txtPassword2.Visibility = Visibility.Collapsed;
+            txtPasswordVisible2.Visibility = Visibility.Visible;
+            txtPasswordVisible2.Text = txtPassword2.Password;
+        }
+
+        private void ShowPassword_Unchecked2(object sender, RoutedEventArgs e)
+        {
+            txtPasswordVisible2.Visibility = Visibility.Collapsed;
+            txtPassword2.Visibility = Visibility.Visible;
+            txtPassword2.Password = txtPasswordVisible2.Text;
+        }
+
 
 
         private void Button_Click_Back(object sender, RoutedEventArgs e)

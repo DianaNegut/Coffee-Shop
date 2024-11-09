@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Angajati.Message_Box;
+using static MaterialDesignThemes.Wpf.Theme;
 
 namespace Angajati
 {
@@ -75,6 +76,8 @@ namespace Angajati
             });
         }
 
+
+
         private async Task<bool> IsUsernameInDatabaseAsync(string username)
         {
             return await Task.Run(() =>
@@ -90,6 +93,24 @@ namespace Angajati
                 }
             });
         }
+
+        private void ShowPassword_Checked(object sender, RoutedEventArgs e)
+        {
+            txtPassword.Visibility = Visibility.Collapsed;
+            txtPasswordVisible.Visibility = Visibility.Visible;
+            txtPasswordVisible.Text = txtPassword.Password;
+        }
+
+        private void ShowPassword_Unchecked(object sender, RoutedEventArgs e)
+        {
+            txtPasswordVisible.Visibility = Visibility.Collapsed;
+            txtPassword.Visibility = Visibility.Visible;
+            txtPassword.Password = txtPasswordVisible.Text;
+        }
+
+
+
+
 
         private async void txtUsername_TextChanged(object sender, TextChangedEventArgs e)
         {

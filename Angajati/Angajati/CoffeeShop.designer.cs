@@ -36,9 +36,6 @@ namespace Angajati
     partial void InsertCafele(Cafele instance);
     partial void UpdateCafele(Cafele instance);
     partial void DeleteCafele(Cafele instance);
-    partial void InsertClient(Client instance);
-    partial void UpdateClient(Client instance);
-    partial void DeleteClient(Client instance);
     partial void InsertComenzi(Comenzi instance);
     partial void UpdateComenzi(Comenzi instance);
     partial void DeleteComenzi(Comenzi instance);
@@ -54,6 +51,9 @@ namespace Angajati
     partial void InsertRezervari(Rezervari instance);
     partial void UpdateRezervari(Rezervari instance);
     partial void DeleteRezervari(Rezervari instance);
+    partial void InsertClient(Client instance);
+    partial void UpdateClient(Client instance);
+    partial void DeleteClient(Client instance);
     #endregion
 		
 		public CoffeeShopDataContext() : 
@@ -102,14 +102,6 @@ namespace Angajati
 			}
 		}
 		
-		public System.Data.Linq.Table<Client> Clients
-		{
-			get
-			{
-				return this.GetTable<Client>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Comenzi> Comenzis
 		{
 			get
@@ -147,6 +139,14 @@ namespace Angajati
 			get
 			{
 				return this.GetTable<Rezervari>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Client> Clients
+		{
+			get
+			{
+				return this.GetTable<Client>();
 			}
 		}
 		
@@ -217,6 +217,27 @@ namespace Angajati
 		public int UpdateIDAngajatByIdRezervare([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDAngajat", DbType="Int")] System.Nullable<int> iDAngajat, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRezervare", DbType="Int")] System.Nullable<int> iDRezervare)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iDAngajat, iDRezervare);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AdaugaLaStoc")]
+		public int AdaugaLaStoc([global::System.Data.Linq.Mapping.ParameterAttribute(Name="CantitateAdaugata", DbType="Int")] System.Nullable<int> cantitateAdaugata, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DenumireProdus", DbType="NVarChar(20)")] string denumireProdus)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cantitateAdaugata, denumireProdus);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ScadePuncte")]
+		public int ScadePuncte([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NrPuncte", DbType="Int")] System.Nullable<int> nrPuncte, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EmailClient", DbType="NVarChar(20)")] string emailClient)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nrPuncte, emailClient);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AdaugaPuncte")]
+		public int AdaugaPuncte([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NrPuncte", DbType="Int")] System.Nullable<int> nrPuncte, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EmailClient", DbType="NVarChar(20)")] string emailClient)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nrPuncte, emailClient);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -762,268 +783,6 @@ namespace Angajati
 		{
 			this.SendPropertyChanging();
 			entity.Cafele = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Client")]
-	public partial class Client : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _IDClient;
-		
-		private string _Nume;
-		
-		private string _Prenume;
-		
-		private System.Nullable<System.DateTime> _DataNastere;
-		
-		private string _Username;
-		
-		private string _Email;
-		
-		private string _Parola;
-		
-		private EntitySet<Comenzi> _Comenzis;
-		
-		private EntitySet<Rezervari> _Rezervaris;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDClientChanging(int value);
-    partial void OnIDClientChanged();
-    partial void OnNumeChanging(string value);
-    partial void OnNumeChanged();
-    partial void OnPrenumeChanging(string value);
-    partial void OnPrenumeChanged();
-    partial void OnDataNastereChanging(System.Nullable<System.DateTime> value);
-    partial void OnDataNastereChanged();
-    partial void OnUsernameChanging(string value);
-    partial void OnUsernameChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    partial void OnParolaChanging(string value);
-    partial void OnParolaChanged();
-    #endregion
-		
-		public Client()
-		{
-			this._Comenzis = new EntitySet<Comenzi>(new Action<Comenzi>(this.attach_Comenzis), new Action<Comenzi>(this.detach_Comenzis));
-			this._Rezervaris = new EntitySet<Rezervari>(new Action<Rezervari>(this.attach_Rezervaris), new Action<Rezervari>(this.detach_Rezervaris));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDClient", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int IDClient
-		{
-			get
-			{
-				return this._IDClient;
-			}
-			set
-			{
-				if ((this._IDClient != value))
-				{
-					this.OnIDClientChanging(value);
-					this.SendPropertyChanging();
-					this._IDClient = value;
-					this.SendPropertyChanged("IDClient");
-					this.OnIDClientChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nume", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
-		public string Nume
-		{
-			get
-			{
-				return this._Nume;
-			}
-			set
-			{
-				if ((this._Nume != value))
-				{
-					this.OnNumeChanging(value);
-					this.SendPropertyChanging();
-					this._Nume = value;
-					this.SendPropertyChanged("Nume");
-					this.OnNumeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Prenume", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
-		public string Prenume
-		{
-			get
-			{
-				return this._Prenume;
-			}
-			set
-			{
-				if ((this._Prenume != value))
-				{
-					this.OnPrenumeChanging(value);
-					this.SendPropertyChanging();
-					this._Prenume = value;
-					this.SendPropertyChanged("Prenume");
-					this.OnPrenumeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DataNastere", DbType="Date")]
-		public System.Nullable<System.DateTime> DataNastere
-		{
-			get
-			{
-				return this._DataNastere;
-			}
-			set
-			{
-				if ((this._DataNastere != value))
-				{
-					this.OnDataNastereChanging(value);
-					this.SendPropertyChanging();
-					this._DataNastere = value;
-					this.SendPropertyChanged("DataNastere");
-					this.OnDataNastereChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="NVarChar(20)")]
-		public string Username
-		{
-			get
-			{
-				return this._Username;
-			}
-			set
-			{
-				if ((this._Username != value))
-				{
-					this.OnUsernameChanging(value);
-					this.SendPropertyChanging();
-					this._Username = value;
-					this.SendPropertyChanged("Username");
-					this.OnUsernameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(30)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this.OnEmailChanging(value);
-					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Parola", DbType="VarChar(517)")]
-		public string Parola
-		{
-			get
-			{
-				return this._Parola;
-			}
-			set
-			{
-				if ((this._Parola != value))
-				{
-					this.OnParolaChanging(value);
-					this.SendPropertyChanging();
-					this._Parola = value;
-					this.SendPropertyChanged("Parola");
-					this.OnParolaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Comenzi", Storage="_Comenzis", ThisKey="IDClient", OtherKey="IDClient")]
-		public EntitySet<Comenzi> Comenzis
-		{
-			get
-			{
-				return this._Comenzis;
-			}
-			set
-			{
-				this._Comenzis.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Rezervari", Storage="_Rezervaris", ThisKey="IDClient", OtherKey="IDClient")]
-		public EntitySet<Rezervari> Rezervaris
-		{
-			get
-			{
-				return this._Rezervaris;
-			}
-			set
-			{
-				this._Rezervaris.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Comenzis(Comenzi entity)
-		{
-			this.SendPropertyChanging();
-			entity.Client = this;
-		}
-		
-		private void detach_Comenzis(Comenzi entity)
-		{
-			this.SendPropertyChanging();
-			entity.Client = null;
-		}
-		
-		private void attach_Rezervaris(Rezervari entity)
-		{
-			this.SendPropertyChanging();
-			entity.Client = this;
-		}
-		
-		private void detach_Rezervaris(Rezervari entity)
-		{
-			this.SendPropertyChanging();
-			entity.Client = null;
 		}
 	}
 	
@@ -1970,9 +1729,9 @@ namespace Angajati
 		
 		private EntityRef<Angajat> _Angajat;
 		
-		private EntityRef<Client> _Client;
-		
 		private EntityRef<Mese> _Mese;
+		
+		private EntityRef<Client> _Client;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1997,8 +1756,8 @@ namespace Angajati
 		public Rezervari()
 		{
 			this._Angajat = default(EntityRef<Angajat>);
-			this._Client = default(EntityRef<Client>);
 			this._Mese = default(EntityRef<Mese>);
+			this._Client = default(EntityRef<Client>);
 			OnCreated();
 		}
 		
@@ -2188,40 +1947,6 @@ namespace Angajati
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Rezervari", Storage="_Client", ThisKey="IDClient", OtherKey="IDClient", IsForeignKey=true)]
-		public Client Client
-		{
-			get
-			{
-				return this._Client.Entity;
-			}
-			set
-			{
-				Client previousValue = this._Client.Entity;
-				if (((previousValue != value) 
-							|| (this._Client.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Client.Entity = null;
-						previousValue.Rezervaris.Remove(this);
-					}
-					this._Client.Entity = value;
-					if ((value != null))
-					{
-						value.Rezervaris.Add(this);
-						this._IDClient = value.IDClient;
-					}
-					else
-					{
-						this._IDClient = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Client");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Mese_Rezervari", Storage="_Mese", ThisKey="IDMasa", OtherKey="IDMasa", IsForeignKey=true)]
 		public Mese Mese
 		{
@@ -2256,6 +1981,40 @@ namespace Angajati
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Rezervari", Storage="_Client", ThisKey="IDClient", OtherKey="IDClient", IsForeignKey=true)]
+		public Client Client
+		{
+			get
+			{
+				return this._Client.Entity;
+			}
+			set
+			{
+				Client previousValue = this._Client.Entity;
+				if (((previousValue != value) 
+							|| (this._Client.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Client.Entity = null;
+						previousValue.Rezervaris.Remove(this);
+					}
+					this._Client.Entity = value;
+					if ((value != null))
+					{
+						value.Rezervaris.Add(this);
+						this._IDClient = value.IDClient;
+					}
+					else
+					{
+						this._IDClient = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Client");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2274,6 +2033,292 @@ namespace Angajati
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Client")]
+	public partial class Client : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _IDClient;
+		
+		private string _Nume;
+		
+		private string _Prenume;
+		
+		private System.Nullable<System.DateTime> _DataNastere;
+		
+		private string _Username;
+		
+		private string _Email;
+		
+		private string _Parola;
+		
+		private System.Nullable<int> _Puncte;
+		
+		private EntitySet<Comenzi> _Comenzis;
+		
+		private EntitySet<Rezervari> _Rezervaris;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDClientChanging(int value);
+    partial void OnIDClientChanged();
+    partial void OnNumeChanging(string value);
+    partial void OnNumeChanged();
+    partial void OnPrenumeChanging(string value);
+    partial void OnPrenumeChanged();
+    partial void OnDataNastereChanging(System.Nullable<System.DateTime> value);
+    partial void OnDataNastereChanged();
+    partial void OnUsernameChanging(string value);
+    partial void OnUsernameChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnParolaChanging(string value);
+    partial void OnParolaChanged();
+    partial void OnPuncteChanging(System.Nullable<int> value);
+    partial void OnPuncteChanged();
+    #endregion
+		
+		public Client()
+		{
+			this._Comenzis = new EntitySet<Comenzi>(new Action<Comenzi>(this.attach_Comenzis), new Action<Comenzi>(this.detach_Comenzis));
+			this._Rezervaris = new EntitySet<Rezervari>(new Action<Rezervari>(this.attach_Rezervaris), new Action<Rezervari>(this.detach_Rezervaris));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDClient", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int IDClient
+		{
+			get
+			{
+				return this._IDClient;
+			}
+			set
+			{
+				if ((this._IDClient != value))
+				{
+					this.OnIDClientChanging(value);
+					this.SendPropertyChanging();
+					this._IDClient = value;
+					this.SendPropertyChanged("IDClient");
+					this.OnIDClientChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nume", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		public string Nume
+		{
+			get
+			{
+				return this._Nume;
+			}
+			set
+			{
+				if ((this._Nume != value))
+				{
+					this.OnNumeChanging(value);
+					this.SendPropertyChanging();
+					this._Nume = value;
+					this.SendPropertyChanged("Nume");
+					this.OnNumeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Prenume", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		public string Prenume
+		{
+			get
+			{
+				return this._Prenume;
+			}
+			set
+			{
+				if ((this._Prenume != value))
+				{
+					this.OnPrenumeChanging(value);
+					this.SendPropertyChanging();
+					this._Prenume = value;
+					this.SendPropertyChanged("Prenume");
+					this.OnPrenumeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DataNastere", DbType="Date")]
+		public System.Nullable<System.DateTime> DataNastere
+		{
+			get
+			{
+				return this._DataNastere;
+			}
+			set
+			{
+				if ((this._DataNastere != value))
+				{
+					this.OnDataNastereChanging(value);
+					this.SendPropertyChanging();
+					this._DataNastere = value;
+					this.SendPropertyChanged("DataNastere");
+					this.OnDataNastereChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="NVarChar(20)")]
+		public string Username
+		{
+			get
+			{
+				return this._Username;
+			}
+			set
+			{
+				if ((this._Username != value))
+				{
+					this.OnUsernameChanging(value);
+					this.SendPropertyChanging();
+					this._Username = value;
+					this.SendPropertyChanged("Username");
+					this.OnUsernameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(30)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Parola", DbType="VarChar(517)")]
+		public string Parola
+		{
+			get
+			{
+				return this._Parola;
+			}
+			set
+			{
+				if ((this._Parola != value))
+				{
+					this.OnParolaChanging(value);
+					this.SendPropertyChanging();
+					this._Parola = value;
+					this.SendPropertyChanged("Parola");
+					this.OnParolaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Puncte", DbType="Int")]
+		public System.Nullable<int> Puncte
+		{
+			get
+			{
+				return this._Puncte;
+			}
+			set
+			{
+				if ((this._Puncte != value))
+				{
+					this.OnPuncteChanging(value);
+					this.SendPropertyChanging();
+					this._Puncte = value;
+					this.SendPropertyChanged("Puncte");
+					this.OnPuncteChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Comenzi", Storage="_Comenzis", ThisKey="IDClient", OtherKey="IDClient")]
+		public EntitySet<Comenzi> Comenzis
+		{
+			get
+			{
+				return this._Comenzis;
+			}
+			set
+			{
+				this._Comenzis.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Rezervari", Storage="_Rezervaris", ThisKey="IDClient", OtherKey="IDClient")]
+		public EntitySet<Rezervari> Rezervaris
+		{
+			get
+			{
+				return this._Rezervaris;
+			}
+			set
+			{
+				this._Rezervaris.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Comenzis(Comenzi entity)
+		{
+			this.SendPropertyChanging();
+			entity.Client = this;
+		}
+		
+		private void detach_Comenzis(Comenzi entity)
+		{
+			this.SendPropertyChanging();
+			entity.Client = null;
+		}
+		
+		private void attach_Rezervaris(Rezervari entity)
+		{
+			this.SendPropertyChanging();
+			entity.Client = this;
+		}
+		
+		private void detach_Rezervaris(Rezervari entity)
+		{
+			this.SendPropertyChanging();
+			entity.Client = null;
 		}
 	}
 	

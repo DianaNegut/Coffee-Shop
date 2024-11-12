@@ -70,6 +70,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Admin_\AddAccountAdmin.xaml.cs" />
+    <Compile Include="Alte Pagini_\AboutUs.xaml.cs" />
+    <Compile Include="Alte Pagini_\MainPage.xaml.cs" />
+    <Compile Include="Alte Pagini_\MyAccount.xaml.cs" />
+    <Compile Include="Alte Pagini_\Order.xaml.cs" />
+    <Compile Include="Alte Pagini_\OrderOptions.xaml.cs" />
+    <Compile Include="Alte Pagini_\Reservation.xaml.cs" />
+    <Compile Include="Alte Pagini_\ShoppingCart.xaml.cs" />
+    <Compile Include="Alte Pagini_\ShoppingCartManager.cs" />
+    <Compile Include="Alte Pagini_\Vouchers.xaml.cs" />
     <Compile Include="CoffeeShop.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -97,6 +107,56 @@
     <Compile Include="Ferestre Angajati\Rezervari.xaml.cs">
       <DependentUpon>Rezervari.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Admin_\SendNotifAdmin.xaml.cs" />
+    <Compile Include="Admin_\StocAdmin.xaml.cs" />
+    <Page Include="Admin_\AddAccountAdmin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin_\HomeAdmin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin_\SendNotifAdmin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Admin_\StocAdmin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Alte Pagini_\AboutUs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Alte Pagini_\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Alte Pagini_\MyAccount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Alte Pagini_\Order.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Alte Pagini_\OrderOptions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Alte Pagini_\Reservation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Alte Pagini_\ShoppingCart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Alte Pagini_\Vouchers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Ferestre Angajati\Orders.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -141,7 +201,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Admin_\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -152,6 +212,7 @@
     <Compile Include="Ferestre Angajati\firstMenu.xaml.cs">
       <DependentUpon>firstMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Admin_\HomeAdmin.xaml.cs" />
     <Compile Include="Message Box\Message.xaml.cs">
       <DependentUpon>Message.xaml</DependentUpon>
     </Compile>
@@ -162,7 +223,7 @@
     <Compile Include="Login\Schimbare Parola.xaml.cs" />
     <Compile Include="Login\SignUp.xaml.cs" />
     <Compile Include="Login\TokenGenerator.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Admin_\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -305,6 +366,42 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add-user.png" />
+    <Resource Include="Images\ready-stock.png" />
+    <Resource Include="Images\shoppingcart.png" />
+    <Resource Include="Images\voucher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\poza.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\espresso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cappuccino.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icedcoffee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\latte.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icedcoffee2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rescoffee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Frappe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\giveord.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" />

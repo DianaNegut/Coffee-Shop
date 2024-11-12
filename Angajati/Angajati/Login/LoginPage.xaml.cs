@@ -99,6 +99,8 @@ namespace Angajati
                     // Aici pagina clientului
                     //ClientiPage clientiPage = new ClientiPage(txtEmail.Text);
                     //clientiPage.Show();
+                    HomeAdmin mp = new HomeAdmin(txtEmail.Text);
+                    mp.Show();
                     this.Close();
                 }
                 else if (employeeUser != null)

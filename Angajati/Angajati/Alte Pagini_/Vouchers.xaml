@@ -1,0 +1,861 @@
+﻿<Window x:Class="Angajati.Vouchers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Angajati"
+        mc:Ignorable="d"
+        Title="Vouchers" Height="740" Width="1220"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="Border"
+                            BorderBrush="Transparent"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}"   >
+                            <ContentPresenter Margin="2"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            RecognizesAccessKey="True" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+
+    <Grid>
+        <!--// Background //-->
+
+        <Border CornerRadius="25" >
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/triangles.png"/>
+            </Border.Background>
+        </Border>
+
+        <!--// Main Grid //-->
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="555" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="555" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="180" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="180" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="180" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="70" />
+            </Grid.RowDefinitions>
+
+            <!--// Header //-->
+            <TextBlock Grid.Row="0"
+                Grid.Column="1"
+                Text="O F E R T E   S P E C I A L E"
+                Foreground="#CDD7E0"
+                FontFamily="Oswald"
+                FontSize="36"
+                VerticalAlignment="Top"
+                Margin="20,30,0,0" FontWeight="Bold" >
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+            </TextBlock>
+
+
+            <TextBlock x:Name="NoVouchers"
+                       Grid.Row="3"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="3"
+                       Text="Din păcate nu aveți niciun voucher disponibil.&#x0a;Colectați mai multe puncte din comenzi și reveniți!"
+                       Background="Transparent"
+                       Foreground="White"
+                       FontSize="40"
+                       HorizontalAlignment="Center"
+                       FontStyle="Italic"
+                       Visibility="Collapsed"
+                       />
+
+            <!--// Voucher1 //-->
+
+            <Button x:Name="Voucher1" Grid.Column="1" Grid.Row="1" Background="Transparent" BorderThickness="0" Visibility="Collapsed" Click="Voucher1_Click">
+                <Button.Content>
+                    <Grid>
+                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="410"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="110"/>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Background="#FFCFB298"
+                                CornerRadius="40">
+                        </Border>
+
+                        <Border Grid.Column="0"
+                                Grid.RowSpan="2"
+                                Background="#4E341B"
+                                CornerRadius="30,0,0,30">
+                        </Border>
+
+                        <Border Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Grid.RowSpan="2"
+                                HorizontalAlignment="Center"
+                                Width="180"
+                                CornerRadius="90"
+                                Margin="0,0,250,0">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Images/cappuccino.jpg" Stretch="UniformToFill"/>
+                            </Border.Background>
+                        </Border>
+
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="0"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Top"
+                                   Margin="0,10,20,0"
+                                   Text="15% Reducere"
+                                   Foreground="Black"
+                                   FontSize="45"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="1"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Top"
+                                   Margin="0,10,50,0"
+                                   Text="la cappuccino-ul tau&#x0a;           preferat"
+                                   Foreground="Black"
+                                   FontSize="25"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                        <TextBlock Grid.Column="0"
+                                   Grid.Row="0"
+                                   Grid.RowSpan="2"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"
+                                   Margin="20,5,0,0"
+                                   Text="S&#x0a;A&#x0a;L&#x0a;E"
+                                   Foreground="White"
+                                   FontSize="34"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+                    </Grid>
+                </Button.Content>
+            </Button>
+
+
+
+            <!--// Voucher2 //-->
+
+            <Button x:Name="Voucher2" Grid.Column="1" Grid.Row="3" Visibility="Collapsed" Background="Transparent" BorderThickness="0" Click="Voucher2_Click">
+                <Button.Content>
+                    <Grid>
+                       
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="410"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="110"/>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Column="0"
+                                 Grid.ColumnSpan="2"
+                                 Grid.Row="0"
+                                 Grid.RowSpan="2"
+                                 Background="#FFCFB298"
+                                 CornerRadius="40">
+                        </Border>
+
+
+                        <Border Grid.Column="0"
+                                Grid.RowSpan="2"
+                                Background="#4E341B"
+                                CornerRadius="30,0,0,30">
+                        </Border>
+
+                        <Border Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Grid.RowSpan="2"
+                                HorizontalAlignment="Center"
+                                Width="180"
+                                CornerRadius="90"
+                                Margin="0,0,250,0">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Images/espresso.png" Stretch="UniformToFill"/>
+                            </Border.Background>
+
+                        </Border>
+
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="0"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Top"
+                                   Margin="0,10,20,0"
+                                   Text="15% Reducere"
+                                   Foreground="Black"
+                                   FontSize="45"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="1"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Top"
+                                   Margin="0,10,90,0"
+                                   Text="la orice cafea&#x0a;   espresso"
+                                   Foreground="Black"
+                                   FontSize="25"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                        <TextBlock Grid.Column="0"
+                                   Grid.Row="0"
+                                   Grid.RowSpan="2"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"
+                                   Margin="20,5,0,0"
+                                   Text="S&#x0a;A&#x0a;L&#x0a;E"
+                                   Foreground="White"
+                                   FontSize="34"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                    </Grid>
+                </Button.Content>
+            </Button>
+
+
+            <!--// Voucher3 //-->
+
+            <Button x:Name="Voucher3" Grid.Column="1" Grid.Row="5" Visibility="Collapsed" Background="Transparent" BorderThickness="0" Click="Voucher3_Click">
+                <Button.Content>
+                    <Grid>
+                       
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="410"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="110"/>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Column="0"
+                                 Grid.ColumnSpan="2"
+                                 Grid.Row="0"
+                                 Grid.RowSpan="2"
+                                 Background="#FFCFB298"
+                                 CornerRadius="40">
+                        </Border>
+
+
+                        <Border Grid.Column="0"
+                                Grid.RowSpan="2"
+                                Background="#4E341B"
+                                CornerRadius="30,0,0,30">
+                        </Border>
+
+                        <Border Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Grid.RowSpan="2"
+                                HorizontalAlignment="Center"
+                                Width="180"
+                                CornerRadius="90"
+                                Margin="0,0,250,0">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Images/latte.jpg" Stretch="UniformToFill"/>
+                            </Border.Background>
+
+                        </Border>
+
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="0"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Top"
+                                   Margin="0,10,20,0"
+                                   Text="15% Reducere"
+                                   Foreground="Black"
+                                   FontSize="45"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="1"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Top"
+                                   Margin="0,10,90,0"
+                                   Text="la latte-ul tau&#x0a;     preferat"
+                                   Foreground="Black"
+                                   FontSize="25"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                        <TextBlock Grid.Column="0"
+                                   Grid.Row="0"
+                                   Grid.RowSpan="2"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"
+                                   Margin="20,5,0,0"
+                                   Text="S&#x0a;A&#x0a;L&#x0a;E"
+                                   Foreground="White"
+                                   FontSize="34"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                    </Grid>
+                </Button.Content>
+            </Button>
+
+
+            <!--// Voucher1 //-->
+
+            <Button x:Name="Voucher4" Grid.Column="3" Grid.Row="1" Visibility="Collapsed" Background="Transparent" BorderThickness="0" Click="Voucher4_Click">
+                <Button.Content>
+                    <Grid>
+                       
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="410"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="110"/>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Column="0"
+                                 Grid.ColumnSpan="2"
+                                 Grid.Row="0"
+                                 Grid.RowSpan="2"
+                                 Background="#FFCFB298"
+                                 CornerRadius="40">
+                        </Border>
+
+
+                        <Border Grid.Column="0"
+                                Grid.RowSpan="2"
+                                Background="#4E341B"
+                                CornerRadius="30,0,0,30">
+                        </Border>
+
+                        <Border Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Grid.RowSpan="2"
+                                HorizontalAlignment="Center"
+                                Width="180"
+                                CornerRadius="90"
+                                Margin="0,0,250,0">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Images/cappuccino.jpg" Stretch="UniformToFill"/>
+                            </Border.Background>
+
+                        </Border>
+
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="0"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Top"
+                                   Margin="0,10,20,0"
+                                   Text="30% Reducere"
+                                   Foreground="Black"
+                                   FontSize="45"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="1"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Top"
+                                   Margin="0,10,50,0"
+                                   Text="la cappuccino-ul tau&#x0a;           preferat"
+                                   Foreground="Black"
+                                   FontSize="25"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                        <TextBlock Grid.Column="0"
+                                   Grid.Row="0"
+                                   Grid.RowSpan="2"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"
+                                   Margin="20,5,0,0"
+                                   Text="S&#x0a;A&#x0a;L&#x0a;E"
+                                   Foreground="White"
+                                   FontSize="34"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                    </Grid>
+                </Button.Content>
+            </Button>
+
+
+            <!--// Voucher2 //-->
+
+            <Button x:Name="Voucher5" Grid.Column="3" Grid.Row="3" Visibility="Collapsed" Background="Transparent" BorderThickness="0" Click="Voucher5_Click">
+                <Button.Content>
+                    <Grid>
+                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="410"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="110"/>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Column="0"
+                                 Grid.ColumnSpan="2"
+                                 Grid.Row="0"
+                                 Grid.RowSpan="2"
+                                 Background="#FFCFB298"
+                                 CornerRadius="40">
+                        </Border>
+
+                        <Border Grid.Column="0"
+                                Grid.RowSpan="2"
+                                Background="#4E341B"
+                                CornerRadius="30,0,0,30">
+                        </Border>
+
+                        <Border Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Grid.RowSpan="2"
+                                HorizontalAlignment="Center"
+                                Width="180"
+                                CornerRadius="90"
+                                Margin="0,0,250,0">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Images/espresso.png" Stretch="UniformToFill"/>
+                            </Border.Background>
+
+                        </Border>
+
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="0"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Top"
+                                   Margin="0,10,20,0"
+                                   Text="30% Reducere"
+                                   Foreground="Black"
+                                   FontSize="45"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="1"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Top"
+                                   Margin="0,10,90,0"
+                                   Text="la orice cafea&#x0a;   espresso"
+                                   Foreground="Black"
+                                   FontSize="25"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                        <TextBlock Grid.Column="0"
+                                   Grid.Row="0"
+                                   Grid.RowSpan="2"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"
+                                   Margin="20,5,0,0"
+                                   Text="S&#x0a;A&#x0a;L&#x0a;E"
+                                   Foreground="White"
+                                   FontSize="34"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                    </Grid>
+                </Button.Content>
+            </Button>
+
+
+            <!--// Voucher3 //-->
+
+            <Button x:Name="Voucher6" Grid.Column="3" Grid.Row="5" Visibility="Collapsed" Background="Transparent" BorderThickness="0" Click="Voucher6_Click">
+                <Button.Content>
+                    <Grid>
+                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="410"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="110"/>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Column="0"
+                                 Grid.ColumnSpan="2"
+                                 Grid.Row="0"
+                                 Grid.RowSpan="2"
+                                 Background="#FFCFB298"
+                                 CornerRadius="40">
+                        </Border>
+
+
+                        <Border Grid.Column="0"
+                                Grid.RowSpan="2"
+                                Background="#4E341B"
+                                CornerRadius="30,0,0,30">
+                        </Border>
+
+                        <Border Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Grid.RowSpan="2"
+                                HorizontalAlignment="Center"
+                                Width="180"
+                                CornerRadius="90"
+                                Margin="0,0,250,0">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Images/latte.jpg" Stretch="UniformToFill"/>
+                            </Border.Background>
+
+                        </Border>
+
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="0"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Top"
+                                   Margin="0,10,20,0"
+                                   Text="30% Reducere"
+                                   Foreground="Black"
+                                   FontSize="45"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                        <TextBlock Grid.Column="1"
+                                   Grid.Row="1"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Top"
+                                   Margin="0,10,90,0"
+                                   Text="la latte-ul tau&#x0a;     preferat"
+                                   Foreground="Black"
+                                   FontSize="25"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                        <TextBlock Grid.Column="0"
+                                   Grid.Row="0"
+                                   Grid.RowSpan="2"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"
+                                   Margin="20,5,0,0"
+                                   Text="S&#x0a;A&#x0a;L&#x0a;E"
+                                   Foreground="White"
+                                   FontSize="34"
+                                   FontFamily="Oswald">
+                        </TextBlock>
+
+                    </Grid>
+                </Button.Content>
+            </Button>
+
+
+            <!--// Dock Bar //-->
+
+            <Grid Grid.Row="7"
+            Grid.Column="0"
+            Grid.ColumnSpan="6"
+            HorizontalAlignment="Center">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="1170" />
+                    <ColumnDefinition Width="25" />
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="1"
+                  Background="Transparent"
+                  CornerRadius="10,10,0,0"
+                  Margin="0,0,0,0"
+                  HorizontalAlignment="Right">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="195" />
+                            <ColumnDefinition Width="195" />
+                            <ColumnDefinition Width="195" />
+                            <ColumnDefinition Width="195" />
+                            <ColumnDefinition Width="195" />
+                            <ColumnDefinition Width="195" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--// Home //-->
+
+                        <Button Grid.Column="0"
+                          x:Name="home"
+                          BorderThickness="0,0,0,0" Click="HomeBtn_Click">
+
+                            <Button.Background>
+
+                                <ImageBrush
+                                  Stretch="Uniform" ImageSource="/Images/homeicon.png" />
+
+                            </Button.Background>
+
+                            <Popup Width="60"
+                             HorizontalOffset="-12"
+                             PlacementTarget="{Binding ElementName=home}"
+                             IsOpen="{Binding ElementName=home, Path=IsMouseOver, Mode=OneWay}">
+
+                                <Grid>
+                                    <Border Background="#F0F0F0"
+                                    Padding="5">
+                                        <TextBlock Text="Acasa"
+                                             Foreground="Black"
+                                             FontWeight="Bold"
+                                             FontSize="14" />
+                                    </Border>
+                                </Grid>
+
+                            </Popup>
+
+                        </Button>
+
+                        <!--// Order //-->
+
+                        <Button Grid.Column="1"
+                          x:Name="order"
+                          BorderThickness="0,0,0,0" Click="OrderBtn_Click">
+
+                            <Button.Background>
+
+                                <ImageBrush Stretch="Uniform" ImageSource="/Images/coffee-cup.png" />
+
+                            </Button.Background>
+
+                            <Popup Width="155"
+                             HorizontalOffset="-20"
+                             PlacementTarget="{Binding ElementName=order}"
+                             IsOpen="{Binding ElementName=order, Path=IsMouseOver, Mode=OneWay}">
+
+                                <Grid>
+                                    <Border Background="#F0F0F0"
+                                     Padding="5">
+                                        <TextBlock Text="Plaseaza o comanda"
+                                             Foreground="Black"
+                                             FontWeight="Bold"
+                                             FontSize="14" />
+                                    </Border>
+                                </Grid>
+
+                            </Popup>
+
+                        </Button>
+
+                        <!--// Reservation //-->
+
+                        <Button Grid.Column="2"
+                      x:Name="reservation"
+                      BorderThickness="0,0,0,0" Click="ReservationBtn_Click">
+
+                            <Button.Background>
+
+                                <ImageBrush Stretch="Uniform" ImageSource="/Images/table.png" />
+
+                            </Button.Background>
+
+                            <Popup Width="120"
+                             HorizontalOffset="-6"
+                             PlacementTarget="{Binding ElementName=reservation}"
+                             IsOpen="{Binding ElementName=reservation, Path=IsMouseOver, Mode=OneWay}">
+
+                                <Grid>
+                                    <Border Background="#F0F0F0"
+                                     Padding="5">
+                                        <TextBlock Text="Rezerva o masa"
+                                             Foreground="Black"
+                                             FontWeight="Bold"
+                                             FontSize="14" />
+                                    </Border>
+                                </Grid>
+
+                            </Popup>
+
+                        </Button>
+
+                        <!--// Shopping Cart //-->
+
+                        <Button Grid.Column="3"
+                          x:Name="cos"
+                          BorderThickness="0,0,0,0"
+                                Click="ShoppingBtn_Click"
+                                >
+
+                            <Button.Background>
+
+                                <ImageBrush Stretch="Uniform" ImageSource="/Images/shoppingcart.png" />
+
+                            </Button.Background>
+
+                            <Popup Width="155"
+                         HorizontalOffset="-35"
+                         PlacementTarget="{Binding ElementName=cos}"
+                         IsOpen="{Binding ElementName=cos, Path=IsMouseOver, Mode=OneWay}">
+
+                                <Grid>
+                                    <Border Background="#F0F0F0"
+                                     Padding="5">
+                                        <TextBlock Text="Cosul de cumparaturi"
+                                             Foreground="Black"
+                                             FontWeight="Bold"
+                                             FontSize="14" />
+                                    </Border>
+                                </Grid>
+
+                            </Popup>
+
+                        </Button>
+
+                        <!--// About Us //-->
+
+                        <Button Grid.Column="4"
+                          x:Name="aboutus"
+                          BorderBrush="Transparent"
+                          BorderThickness="0,0,0,0"
+                          Padding="0"
+                                Click="ContactBtn_Click">
+
+                            <Button.Background>
+
+                                <ImageBrush Stretch="Uniform" ImageSource="/Images/phone-call.png" />
+
+                            </Button.Background>
+
+                            <Popup Width="85"
+                             HorizontalOffset="-19"
+                             PlacementTarget="{Binding ElementName=aboutus}"
+                             IsOpen="{Binding ElementName=aboutus, Path=IsMouseOver, Mode=OneWay}" Opacity="0" Visibility="Hidden">
+
+                                <Grid>
+                                    <Border Background="#F0F0F0"
+                             Padding="5">
+                                        <TextBlock Text="Despre noi"
+                                             Foreground="Black"
+                                             FontWeight="Bold"
+                                             FontSize="14" />
+                                    </Border>
+                                </Grid>
+
+                            </Popup>
+
+                        </Button>
+
+                        <!--// Vouchers //-->
+
+                        <Button Grid.Column="5"
+                          x:Name="vouchers"
+                          BorderThickness="0,0,0,0">
+
+                            <Button.Background>
+
+                                <ImageBrush ImageSource="/Images/voucher.png"
+                                    Stretch="Uniform" />
+
+                            </Button.Background>
+
+                            <Popup Width="70"
+                         HorizontalOffset="-18"
+                         PlacementTarget="{Binding ElementName=vouchers}"
+                         IsOpen="{Binding ElementName=vouchers, Path=IsMouseOver, Mode=OneWay}">
+
+                                <Grid>
+                                    <Border Background="#F0F0F0"
+                 Padding="5">
+                                        <TextBlock Text="Vouchere"
+                         Foreground="Black"
+                         FontWeight="Bold"
+                         FontSize="14" />
+                                    </Border>
+                                </Grid>
+
+                            </Popup>
+
+                        </Button>
+
+
+                    </Grid>
+
+                </Border>
+
+            </Grid>
+
+        </Grid>
+
+        <!--// User //-->
+
+        <Grid Height="50"
+ Width="50"
+ HorizontalAlignment="Right"
+ VerticalAlignment="Top"
+ Margin="0,30,73,0">
+
+            <Button x:Name="user" BorderThickness="0,0,0,0" Click="AccountBtn_Click">
+
+                <Button.Background>
+
+                    <ImageBrush
+   Stretch="Uniform" ImageSource="/Images/profile-user.png" />
+
+                </Button.Background>
+
+            </Button>
+
+        </Grid>
+
+        <!--// Exit Button //-->
+        <Grid Height="50"
+              Width="50"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Top"
+              Margin="0,30,10,0">
+            <Button x:Name="ExitBtn"
+                    BorderThickness="0,0,0,0" Click="ExitBtn_Click">
+
+                <Button.Background>
+
+                    <ImageBrush ImageSource="/Images/close.png"
+                         Stretch="Uniform" />
+
+                </Button.Background>
+
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

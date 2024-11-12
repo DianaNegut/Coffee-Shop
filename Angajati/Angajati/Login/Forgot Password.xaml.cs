@@ -15,8 +15,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml.Linq;
 using Angajati.Message_Box;
+using Angajati.Login;
 
-namespace Angajati.Login
+namespace Angajati
 {
     /// <summary>
     /// Interaction logic for Forgot_Password.xaml

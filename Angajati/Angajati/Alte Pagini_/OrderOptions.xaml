@@ -1,0 +1,203 @@
+﻿<Window x:Class="Angajati.OrderOptions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Angajati"
+        mc:Ignorable="d"
+        Title="OrderOptions" Height="400" Width="250" WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Grid>
+
+        <!--// Background //-->
+
+        <Border
+                CornerRadius="25" >
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/gold.jpg" Stretch="UniformToFill"/>
+            </Border.Background>
+        </Border>
+
+        <Grid x:Name="MainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="65" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="65" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+
+            <!--// Header //-->
+            <TextBlock Grid.Row="0"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Text="PERSONALIZARE"
+                Foreground="Black"
+                FontFamily="Oswald"
+                FontSize="23"
+                Margin="10,10,0,0" FontWeight="Bold" >
+            </TextBlock>
+
+
+            <!--// Lapte //-->
+            <TextBlock Grid.Row="1"
+                       Grid.Column="1"
+                       Text="Lapte:"
+                       Foreground="Black"
+                       FontFamily="Oswald"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Margin="0, 10, 0, 0">
+            </TextBlock>
+
+            <RadioButton Grid.Column="1"
+                         Grid.Row="2"
+                         Foreground="Black"
+                         Content="Normal"
+                         GroupName="Lapte" />
+
+            <RadioButton Grid.Column="2"
+                         Grid.Row="2"
+                         Foreground="Black"
+                         Content="Soia"
+                         GroupName="Lapte" />
+
+            <RadioButton Grid.Column="3"
+                         Grid.Row="2"
+                         Foreground="Black"
+                         Content="Ovăz"
+                         GroupName="Lapte" />
+            
+            <RadioButton Grid.Column="1"
+                         Grid.Row="2"
+                         Foreground="Black"
+                         Margin="0,25, 0, 0"
+                         Content="Orez"
+                         GroupName="Lapte"/>
+
+            <RadioButton Grid.Column="2"
+                         Grid.Row="2"
+                         Foreground="Black"
+                         Margin="0,25, 0, 0"
+                         Content="Cocos"
+                         GroupName="Lapte"/>
+
+            <!--// Siropuri //-->
+            <TextBlock Grid.Row="3"
+                       Grid.Column="1"
+                       Text="Sirop:"
+                       Foreground="Black"
+                       FontFamily="Oswald"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Margin="0, 10, 0, 0">
+            </TextBlock>
+
+            <RadioButton Grid.Column="1"
+                         Grid.Row="4"
+                         Foreground="Black"
+                         Content="Ciocolată"
+                         GroupName="Siropuri" />
+
+            <RadioButton Grid.Column="2"
+                         Grid.Row="4"
+                         Foreground="Black"
+                         Content="Vanilie"
+                         GroupName="Siropuri" />
+
+            <RadioButton Grid.Column="3"
+                         Grid.Row="4"
+                         Foreground="Black"
+                         Content="Caramel"
+                         GroupName="Siropuri" />
+
+            <RadioButton Grid.Column="1"
+                         Grid.Row="4"
+                         Foreground="Black"
+                         Margin="0, 25, 0, 0"
+                         Content="Cocos"
+                         GroupName="Siropuri"/>
+
+            <RadioButton Grid.Column="2"
+                         Grid.Row="4"
+                         Foreground="Black"
+                         Margin="0,25, 0, 0"
+                         Content="Irish"
+                         GroupName="Siropuri"/>
+
+            <RadioButton Grid.Column="3"
+                         Grid.Row="4"
+                         Foreground="Black"
+                         Margin="0,25, 0, 0"
+                         Content="Amaretto"
+                         GroupName="Siropuri"/>
+
+
+            <!--// Frisca //-->
+            <TextBlock Grid.Row="5"
+                       Grid.Column="1"
+                       Text="Frișcă:"
+                       Foreground="Black"
+                       FontFamily="Oswald"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Margin="0, 10, 0, 0">
+            </TextBlock>
+
+            <RadioButton Grid.Column="1"
+                         Grid.Row="6"
+                         Foreground="Black"
+                         Content="Da"
+                         GroupName="Frisca" />
+
+            <RadioButton Grid.Column="2"
+                         Grid.Row="6"
+                         Foreground="Black"
+                         Content="Nu"
+                         GroupName="Frisca" />
+
+
+            <Button x:Name="okay"
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    Width="50"
+                    Height="25"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Background="#FFCF9333"
+                    Foreground="Black"
+                    Content="OK"
+                    FontFamily="Oswald" Click="OkayBtn_Click" />
+
+            <Button x:Name="cancel"
+                    Grid.Row="7"
+                    Grid.Column="3"
+                    Width="50"
+                    Height="25"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Background="#FFCF9333"
+                    Foreground="Black"
+                    Content="Cancel"
+                    FontFamily="Oswald" Click="CancelBtn_Click" />
+
+
+        </Grid>
+
+    </Grid>
+</Window>

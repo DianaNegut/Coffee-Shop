@@ -27,19 +27,6 @@
       <Association Name="Cafele_DetaliiComenzi" Member="DetaliiComenzis" ThisKey="IDProdus" OtherKey="IDCafea" Type="DetaliiComenzi" />
     </Type>
   </Table>
-  <Table Name="dbo.Client" Member="Clients">
-    <Type Name="Client">
-      <Column Name="IDClient" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Nume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="Prenume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="DataNastere" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="Username" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="Parola" Type="System.String" DbType="VarChar(517)" CanBeNull="true" />
-      <Association Name="Client_Comenzi" Member="Comenzis" ThisKey="IDClient" OtherKey="IDClient" Type="Comenzi" />
-      <Association Name="Client_Rezervari" Member="Rezervaris" ThisKey="IDClient" OtherKey="IDClient" Type="Rezervari" />
-    </Type>
-  </Table>
   <Table Name="dbo.Comenzi" Member="Comenzis">
     <Type Name="Comenzi">
       <Column Name="IDComanda" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -94,8 +81,22 @@
       <Column Name="NrLocuri" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Ora" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
       <Association Name="Angajat_Rezervari" Member="Angajat" ThisKey="IDAngajat" OtherKey="IDAngajat" Type="Angajat" IsForeignKey="true" />
-      <Association Name="Client_Rezervari" Member="Client" ThisKey="IDClient" OtherKey="IDClient" Type="Client" IsForeignKey="true" />
       <Association Name="Mese_Rezervari" Member="Mese" ThisKey="IDMasa" OtherKey="IDMasa" Type="Mese" IsForeignKey="true" />
+      <Association Name="Client_Rezervari" Member="Client" ThisKey="IDClient" OtherKey="IDClient" Type="Client" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Client" Member="Clients">
+    <Type Name="Client">
+      <Column Name="IDClient" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Prenume" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DataNastere" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Parola" Type="System.String" DbType="VarChar(517)" CanBeNull="true" />
+      <Column Name="Puncte" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Client_Comenzi" Member="Comenzis" ThisKey="IDClient" OtherKey="IDClient" Type="Comenzi" />
+      <Association Name="Client_Rezervari" Member="Rezervaris" ThisKey="IDClient" OtherKey="IDClient" Type="Rezervari" />
     </Type>
   </Table>
   <Function Name="dbo.GetClientNameByOrderId" Method="GetClientNameByOrderId">
@@ -157,6 +158,21 @@
   <Function Name="dbo.UpdateIDAngajatByIdRezervare" Method="UpdateIDAngajatByIdRezervare">
     <Parameter Name="IDAngajat" Parameter="iDAngajat" Type="System.Int32" DbType="Int" />
     <Parameter Name="IDRezervare" Parameter="iDRezervare" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AdaugaLaStoc" Method="AdaugaLaStoc">
+    <Parameter Name="CantitateAdaugata" Parameter="cantitateAdaugata" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DenumireProdus" Parameter="denumireProdus" Type="System.String" DbType="NVarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ScadePuncte" Method="ScadePuncte">
+    <Parameter Name="NrPuncte" Parameter="nrPuncte" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EmailClient" Parameter="emailClient" Type="System.String" DbType="NVarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AdaugaPuncte" Method="AdaugaPuncte">
+    <Parameter Name="NrPuncte" Parameter="nrPuncte" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EmailClient" Parameter="emailClient" Type="System.String" DbType="NVarChar(20)" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

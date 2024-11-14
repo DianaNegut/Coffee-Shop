@@ -90,7 +90,7 @@
             </Button>
         </Grid>
 
-        <Button Content="Finalizată!" Style="{StaticResource Rezervarebutton}" Margin="129,388,120,10" Click="ButtonFinalizareRezervare_Click"/>
+        <Button Content="Finalizată!" Style="{StaticResource Rezervarebutton}" Margin="129,400,200,10" Click="ButtonFinalizareRezervare_Click"/>
         <Image Margin="28,214,286,62" Source="/Images/rezervare_terminata.png"/>
     </Grid>
 </Window>

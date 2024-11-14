@@ -101,5 +101,12 @@ namespace Angajati.Ferestre_Angajati
             this.Hide();
             pa.Show();
         }
+
+        private void logoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            LoginPage l = new LoginPage();
+            l.Show();
+            this.Hide();
+        }
     }
 }

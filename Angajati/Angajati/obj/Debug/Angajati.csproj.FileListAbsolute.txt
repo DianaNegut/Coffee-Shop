@@ -94,7 +94,6 @@ C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Login\Resetare Parola.g.cs
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Login\Schimbare Parola.g.cs
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Login\SignUp.g.cs
-C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\MainWindow.g.cs
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Ferestre Angajati\Rezervari.g.cs
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Message Box\Error.g.cs
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Message Box\Message.g.cs
@@ -125,7 +124,6 @@ C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Login\Resetare Parola.baml
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Login\Schimbare Parola.baml
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Login\SignUp.baml
-C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\MainWindow.baml
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Ferestre Angajati\Rezervari.baml
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Angajati.g.resources
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Angajati.Properties.Resources.resources
@@ -215,3 +213,29 @@ C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop - Copy\Angajati\Angajati\obj\Debug\Angajati.csproj.GenerateResource.cache
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop - Copy\Angajati\Angajati\obj\Debug\Angajati.csproj.CoreCompileInputs.cache
 C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop - Copy\Angajati\Angajati\obj\Debug\Angajati.csproj.Up2Date
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Admin_\AddAccountAdmin.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Admin_\HomeAdmin.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Admin_\SendNotifAdmin.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Admin_\StocAdmin.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\AboutUs.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\MainPage.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\MyAccount.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\Order.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\OrderOptions.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\Reservation.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\ShoppingCart.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\Vouchers.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Admin_\MainWindow.g.cs
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Admin_\AddAccountAdmin.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Admin_\HomeAdmin.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Admin_\SendNotifAdmin.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Admin_\StocAdmin.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\AboutUs.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\MainPage.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\MyAccount.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\Order.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\OrderOptions.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\Reservation.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\ShoppingCart.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Alte Pagini_\Vouchers.baml
+C:\Users\Diana\Desktop\myUniqueFolder\ANUL 3 ATM DIANA NEGUT\SEMESTRUL 1\AP BAZE\Coffee-Shop\Angajati\Angajati\obj\Debug\Admin_\MainWindow.baml

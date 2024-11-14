@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/poza.jpeg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/logout.png")]
 
 

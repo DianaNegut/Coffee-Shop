@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Angajati"
         mc:Ignorable="d"
-        Title="SignUp" Height="740" Width="1220">
+        Title="SignUp" Height="740" Width="1220" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -45,7 +45,7 @@
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Row="0" Grid.Column="0"   Text="Nume:"  VerticalAlignment="Center" Margin="5" />
                         <TextBlock x:Name="textNume"  Text="Nume" Style="{StaticResource textHint}"/>
-                        <TextBox x:Name="txtNume"  Style="{StaticResource textBox}" TextChanged="txtNume_TextChanged" />
+                        <TextBox x:Name="txtNume" VerticalAlignment="Center"  Style="{StaticResource textBox}" TextChanged="txtNume_TextChanged" />
 
                     </Grid>
 
@@ -58,7 +58,7 @@
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Row="0" Grid.Column="0"   Text="Prenume:" VerticalAlignment="Center" Margin="5" />
                         <TextBlock x:Name="textPrenume"  Text="Prenume" Style="{StaticResource textHint}"/>
-                        <TextBox x:Name="txtPrenume"  Style="{StaticResource textBox}" TextChanged="txtPrenume_TextChanged" />
+                        <TextBox x:Name="txtPrenume" VerticalAlignment="Center"  Style="{StaticResource textBox}" TextChanged="txtPrenume_TextChanged" />
 
                     </Grid>
 
@@ -87,7 +87,7 @@
                         <TextBlock Grid.Row="0" Grid.Column="0" Text="Username:" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock x:Name="textUsername" Style="{StaticResource textHint}" Grid.Column="1" Margin="5, 0, 0, 0"/>
 
-                        <TextBox x:Name="txtUsername" Style="{StaticResource textBox}" TextChanged="txtUsername_TextChanged" Grid.Column="1" Margin="0, 0, 0, 0"/>
+                        <TextBox x:Name="txtUsername" VerticalAlignment="Center" Style="{StaticResource textBox}" TextChanged="txtUsername_TextChanged" Grid.Column="1" Margin="0, 0, 0, 0"/>
 
 
                         <TextBlock x:Name="errorTextBlock" Text="" Foreground="Red" Margin="0, 5, 0, 0" Grid.ColumnSpan="2" Visibility="Collapsed" />
@@ -103,7 +103,7 @@
                         <TextBlock Grid.Row="0" Grid.Column="0" Text="Email:" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock x:Name="textEmail" Style="{StaticResource textHint}" Grid.Column="1" Margin="5, 0, 0, 0"/>
 
-                        <TextBox x:Name="txtEmail" Style="{StaticResource textBox}" TextChanged="txtEmail_TextChanged" Grid.Column="1" Margin="0, 0, 0, 0"/>
+                        <TextBox x:Name="txtEmail" Style="{StaticResource textBox}" VerticalAlignment="Center" TextChanged="txtEmail_TextChanged" Grid.Column="1" Margin="0, 0, 0, 0"/>
 
 
                         <TextBlock x:Name="errorTextBlockUsername" Text="" Foreground="Red" Margin="0, 5, 0, 0" Grid.ColumnSpan="2" Visibility="Collapsed" />
@@ -120,7 +120,7 @@
                         <TextBlock Grid.Row="0" Grid.Column="0" Text="Parola:" VerticalAlignment="Center" Margin="5" />
                         <TextBox x:Name="textPassword" Style="{StaticResource textBox}" Grid.Column="1" Margin="10,4,126,0"/>
                         <PasswordBox x:Name="txtPassword" Style="{StaticResource passwordBox}" Grid.Column="1" Margin="10,4,126,0" />
-                        <TextBox x:Name="txtPasswordVisible" Style="{StaticResource textBox}" Grid.Column="1" Margin="10,4,126,0" Visibility="Collapsed" />
+                        <TextBox x:Name="txtPasswordVisible" VerticalAlignment="Center" Style="{StaticResource textBox}" Grid.Column="1" Margin="10,4,126,0" Visibility="Collapsed" />
                         <CheckBox Content="Arată parola" x:Name="showPasswordCheckBox"
                   Checked="ShowPassword_Checked" Unchecked="ShowPassword_Unchecked" 
                   Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>

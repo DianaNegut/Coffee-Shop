@@ -240,6 +240,20 @@ namespace Angajati
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nrPuncte, emailClient);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.VerificaAdministrator")]
+		public int VerificaAdministrator([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDAngajat", DbType="Int")] System.Nullable<int> iDAngajat)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iDAngajat);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.VerificaAdministratorPeEmail")]
+		public int VerificaAdministratorPeEmail([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Email", DbType="NVarChar(30)")] string email)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), email);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Angajat")]

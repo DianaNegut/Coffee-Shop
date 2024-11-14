@@ -1,82 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\",
+  "WorkspaceRootPath": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\alte pagini_\\reservation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\alte pagini_\\reservation.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\coffee-shop\\angajati\\angajati\\login\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\login\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\alte pagini_\\reservation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\alte pagini_\\reservation.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\coffee-shop\\angajati\\angajati\\ferestre angajati\\profilangajat.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\ferestre angajati\\profilangajat.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\alte pagini_\\order.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\alte pagini_\\order.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\coffee-shop - copy\\angajati\\angajati\\admin_\\addaccountadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\admin_\\addaccountadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\admin_\\homeadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\admin_\\homeadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\ferestre angajati\\desprenoi.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\ferestre angajati\\desprenoi.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\login\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\login\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\admin_\\stocadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\admin_\\stocadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\admin_\\sendnotifadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\admin_\\sendnotifadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\admin_\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\admin_\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\admin_\\sendnotifadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\admin_\\sendnotifadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\admin_\\addaccountadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\admin_\\addaccountadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\login\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\login\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\alte pagini_\\myaccount.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\alte pagini_\\myaccount.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\alte pagini_\\vouchers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\alte pagini_\\vouchers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\alte pagini_\\shoppingcart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\alte pagini_\\shoppingcart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\alte pagini_\\order.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\alte pagini_\\order.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\alte pagini_\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\alte pagini_\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\angajati\\alte pagini_\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\alte pagini_\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|c:\\users\\diana\\desktop\\myuniquefolder\\anul 3 atm diana negut\\semestrul 1\\ap baze\\coffee-shop\\angajati\\angajati\\ferestre angajati\\profilangajat.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1C8A6E31-D84B-4679-8FDD-CF5E4B913FFE}|Angajati\\Angajati.csproj|solutionrelative:angajati\\ferestre angajati\\profilangajat.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,229 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SendNotifAdmin.xaml",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Admin_\\SendNotifAdmin.xaml",
-              "RelativeDocumentMoniker": "Angajati\\Admin_\\SendNotifAdmin.xaml",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Admin_\\SendNotifAdmin.xaml",
-              "RelativeToolTip": "Angajati\\Admin_\\SendNotifAdmin.xaml",
+              "DocumentIndex": 0,
+              "Title": "Login\\SignUp.xaml",
+              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Login\\SignUp.xaml",
+              "RelativeDocumentMoniker": "Angajati\\Login\\SignUp.xaml",
+              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Login\\SignUp.xaml",
+              "RelativeToolTip": "Angajati\\Login\\SignUp.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-12T15:25:52.301Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddAccountAdmin.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Admin_\\AddAccountAdmin.xaml.cs",
-              "RelativeDocumentMoniker": "Angajati\\Admin_\\AddAccountAdmin.xaml.cs",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Admin_\\AddAccountAdmin.xaml.cs",
-              "RelativeToolTip": "Angajati\\Admin_\\AddAccountAdmin.xaml.cs",
-              "ViewState": "AgIAAKcAAAAAAAAAAAAqwLAAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T08:47:04.043Z",
+              "WhenOpened": "2024-11-14T08:32:46.652Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "StocAdmin.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Admin_\\StocAdmin.xaml.cs",
-              "RelativeDocumentMoniker": "Angajati\\Admin_\\StocAdmin.xaml.cs",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Admin_\\StocAdmin.xaml.cs",
-              "RelativeToolTip": "Angajati\\Admin_\\StocAdmin.xaml.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAvwEMAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T15:26:29.153Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DespreNoi.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Ferestre Angajati\\DespreNoi.xaml.cs",
-              "RelativeDocumentMoniker": "Angajati\\Ferestre Angajati\\DespreNoi.xaml.cs",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Ferestre Angajati\\DespreNoi.xaml.cs",
-              "RelativeToolTip": "Angajati\\Ferestre Angajati\\DespreNoi.xaml.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAEwGUAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T15:27:57.075Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Reservation.xaml",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\Reservation.xaml",
-              "RelativeDocumentMoniker": "Angajati\\Alte Pagini_\\Reservation.xaml",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\Reservation.xaml",
-              "RelativeToolTip": "Angajati\\Alte Pagini_\\Reservation.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-12T10:59:52.795Z",
+              "Title": "Ferestre Angajati\\profilAngajat.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Ferestre Angajati\\profilAngajat.xaml.cs",
+              "RelativeDocumentMoniker": "Angajati\\Ferestre Angajati\\profilAngajat.xaml.cs",
+              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Ferestre Angajati\\profilAngajat.xaml.cs",
+              "RelativeToolTip": "Angajati\\Ferestre Angajati\\profilAngajat.xaml.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAQwGEAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T08:30:21.297Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Reservation.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\Reservation.xaml.cs",
-              "RelativeDocumentMoniker": "Angajati\\Alte Pagini_\\Reservation.xaml.cs",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\Reservation.xaml.cs",
-              "RelativeToolTip": "Angajati\\Alte Pagini_\\Reservation.xaml.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAUwFAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T11:02:45.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Admin_\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Angajati\\Admin_\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Admin_\\MainWindow.xaml",
-              "RelativeToolTip": "Angajati\\Admin_\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-12T15:25:53.932Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SendNotifAdmin.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Admin_\\SendNotifAdmin.xaml.cs",
-              "RelativeDocumentMoniker": "Angajati\\Admin_\\SendNotifAdmin.xaml.cs",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Admin_\\SendNotifAdmin.xaml.cs",
-              "RelativeToolTip": "Angajati\\Admin_\\SendNotifAdmin.xaml.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAIA+wE0AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T15:25:55.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeAdmin.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Admin_\\HomeAdmin.xaml.cs",
-              "RelativeDocumentMoniker": "Angajati\\Admin_\\HomeAdmin.xaml.cs",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Admin_\\HomeAdmin.xaml.cs",
-              "RelativeToolTip": "Angajati\\Admin_\\HomeAdmin.xaml.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAjwC4AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T15:24:32.093Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Login\\LoginPage.xaml.cs",
-              "RelativeDocumentMoniker": "Angajati\\Login\\LoginPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Login\\LoginPage.xaml.cs",
-              "RelativeToolTip": "Angajati\\Login\\LoginPage.xaml.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAEwGMAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T09:04:46.132Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LoginPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Login\\LoginPage.xaml",
-              "RelativeDocumentMoniker": "Angajati\\Login\\LoginPage.xaml",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Login\\LoginPage.xaml",
-              "RelativeToolTip": "Angajati\\Login\\LoginPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-12T15:24:10.701Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Order.xaml",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\Order.xaml",
-              "RelativeDocumentMoniker": "Angajati\\Alte Pagini_\\Order.xaml",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\Order.xaml",
-              "RelativeToolTip": "Angajati\\Alte Pagini_\\Order.xaml",
+              "Title": "profilAngajat.xaml",
+              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Ferestre Angajati\\profilAngajat.xaml",
+              "RelativeDocumentMoniker": "Angajati\\Ferestre Angajati\\profilAngajat.xaml",
+              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop\\Angajati\\Angajati\\Ferestre Angajati\\profilAngajat.xaml",
+              "RelativeToolTip": "Angajati\\Ferestre Angajati\\profilAngajat.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-12T09:06:16.231Z",
+              "WhenOpened": "2024-11-14T08:20:57.916Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Order.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\Order.xaml.cs",
-              "RelativeDocumentMoniker": "Angajati\\Alte Pagini_\\Order.xaml.cs",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\Order.xaml.cs",
-              "RelativeToolTip": "Angajati\\Alte Pagini_\\Order.xaml.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAmwBwAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T09:05:32.082Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AddAccountAdmin.xaml",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Admin_\\AddAccountAdmin.xaml",
-              "RelativeDocumentMoniker": "Angajati\\Admin_\\AddAccountAdmin.xaml",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Admin_\\AddAccountAdmin.xaml",
-              "RelativeToolTip": "Angajati\\Admin_\\AddAccountAdmin.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-12T08:47:06.755Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ShoppingCart.xaml",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\ShoppingCart.xaml",
-              "RelativeDocumentMoniker": "Angajati\\Alte Pagini_\\ShoppingCart.xaml",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\ShoppingCart.xaml",
-              "RelativeToolTip": "Angajati\\Alte Pagini_\\ShoppingCart.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-12T11:00:30.829Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Vouchers.xaml",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\Vouchers.xaml",
-              "RelativeDocumentMoniker": "Angajati\\Alte Pagini_\\Vouchers.xaml",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\Vouchers.xaml",
-              "RelativeToolTip": "Angajati\\Alte Pagini_\\Vouchers.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-12T11:01:58.596Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "Angajati\\Alte Pagini_\\MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\MainPage.xaml.cs",
-              "RelativeToolTip": "Angajati\\Alte Pagini_\\MainPage.xaml.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAmwCAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T09:01:58.237Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MyAccount.xaml",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\MyAccount.xaml",
-              "RelativeDocumentMoniker": "Angajati\\Alte Pagini_\\MyAccount.xaml",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\MyAccount.xaml",
-              "RelativeToolTip": "Angajati\\Alte Pagini_\\MyAccount.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-12T14:53:41.844Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\MainPage.xaml",
-              "RelativeDocumentMoniker": "Angajati\\Alte Pagini_\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\Diana\\Desktop\\myUniqueFolder\\ANUL 3 ATM DIANA NEGUT\\SEMESTRUL 1\\AP BAZE\\Coffee-Shop - Copy\\Angajati\\Angajati\\Alte Pagini_\\MainPage.xaml",
-              "RelativeToolTip": "Angajati\\Alte Pagini_\\MainPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-12T09:00:50.599Z"
             }
           ]
         }

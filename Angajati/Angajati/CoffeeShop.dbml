@@ -175,4 +175,12 @@
     <Parameter Name="EmailClient" Parameter="emailClient" Type="System.String" DbType="NVarChar(20)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.VerificaAdministrator" Method="VerificaAdministrator">
+    <Parameter Name="IDAngajat" Parameter="iDAngajat" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.VerificaAdministratorPeEmail" Method="VerificaAdministratorPeEmail">
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

@@ -73,106 +73,205 @@
                             <ColumnDefinition Width="195" />
                         </Grid.ColumnDefinitions>
 
+                        
+
                         <!-- Home Button -->
                         <Button Grid.Column="0"
-                                x:Name="home"
-                                BorderThickness="0,0,0,0"
-                                Click="home_Click"
-                                Height="70"
-                                VerticalAlignment="Top">
-                            <Button.Background>
-                                <ImageBrush Stretch="Uniform" ImageSource="/Images/homeicon.png" />
-                            </Button.Background>
+        x:Name="home"
+        BorderThickness="0,0,0,0"
+        Click="home_Click"
+        OverridesDefaultStyle="True">
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <Image Source="/Images/homeicon.png" Stretch="Uniform"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent" />
+                                    <Setter Property="BorderBrush" Value="#182c25" />
+                                    <Setter Property="BorderThickness" Value="0" />
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#182c25" />
+                                            <Setter Property="BorderBrush" Value="#182c25" />
+                                            <Setter Property="BorderThickness" Value="2" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter Property="Background" Value="#182c25" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+
                             <Popup Width="60"
-                                   HorizontalOffset="-12"
-                                   PlacementTarget="{Binding ElementName=home}"
-                                   IsOpen="{Binding ElementName=home, Path=IsMouseOver, Mode=OneWay}">
+           HorizontalOffset="-12"
+           PlacementTarget="{Binding ElementName=home}"
+           IsOpen="{Binding ElementName=home, Path=IsMouseOver, Mode=OneWay}">
+
                                 <Grid>
                                     <Border Background="#F0F0F0" Padding="5">
                                         <TextBlock Text="Acasa"
-                                                   Foreground="Black"
-                                                   FontWeight="Bold"
-                                                   FontSize="14" />
+                           Foreground="Black"
+                           FontWeight="Bold"
+                           FontSize="14" />
                                     </Border>
                                 </Grid>
+
                             </Popup>
                         </Button>
 
-                        <!-- Reservation Button -->
+
                         <Button Grid.Column="1"
-                                x:Name="reservation"
-                                BorderThickness="0,0,0,0"
-                                Grid.ColumnSpan="2"
-                                Margin="97,0,97,0"
-                                Click="reservation_Click">
-                            <Button.Background>
-                                <ImageBrush Stretch="Uniform" ImageSource="/Images/table.png" />
-                            </Button.Background>
+x:Name="reservation"
+BorderThickness="0,0,0,0"  Grid.ColumnSpan="2" Margin="97,0,97,0" Click="reservation_Click" OverridesDefaultStyle="True" >
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent" />
+                                    <Setter Property="BorderBrush" Value="#182c25" />
+                                    <Setter Property="BorderThickness" Value="0" />
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#182c25" />
+                                            <Setter Property="BorderBrush" Value="#182c25" />
+                                            <Setter Property="BorderThickness" Value="2" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter Property="Background" Value="#182c25" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}">
+
+                                        <Image Source="/Images/table.png" Stretch="Uniform"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+
                             <Popup Width="120"
-                                   HorizontalOffset="-6"
-                                   PlacementTarget="{Binding ElementName=reservation}"
-                                   IsOpen="{Binding ElementName=reservation, Path=IsMouseOver, Mode=OneWay}">
+       HorizontalOffset="-6"
+       PlacementTarget="{Binding ElementName=reservation}"
+       IsOpen="{Binding ElementName=reservation, Path=IsMouseOver, Mode=OneWay}">
+
                                 <Grid>
                                     <Border Background="#F0F0F0" Padding="5">
                                         <TextBlock Text="Rezervarile tale!"
-                                                   Foreground="Black"
-                                                   FontWeight="Bold"
-                                                   FontSize="14" />
+               Foreground="Black"
+               FontWeight="Bold"
+               FontSize="14" />
                                     </Border>
                                 </Grid>
+
                             </Popup>
+
                         </Button>
 
-                        <!-- Orders Button -->
-                        <Button Grid.Column="3"
-                                x:Name="comenzi"
-                                BorderThickness="0,0,0,0"
-                                Grid.ColumnSpan="2"
-                                Margin="54,0,141,0"
-                                Click="comenzi_Click">
-                            <Button.Background>
-                                <ImageBrush Stretch="Uniform" ImageSource="/Images/coffee-cup.png" />
-                            </Button.Background>
+
+                        <Button Grid.Column="3" x:Name="comenzi" BorderThickness="0,0,0,0"  Grid.ColumnSpan="2" Margin="54,0,141,0" Click="comenzi_Click" >
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent" />
+                                    <Setter Property="BorderBrush" Value="#182c25" />
+                                    <Setter Property="BorderThickness" Value="0" />
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#182c25" />
+                                            <Setter Property="BorderBrush" Value="#182c25" />
+                                            <Setter Property="BorderThickness" Value="2" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter Property="Background" Value="#182c25" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}">
+
+                                        <Image Source="/Images/coffee-cup.png" Stretch="Uniform" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+
                             <Popup Width="120"
-                                   HorizontalOffset="-6"
-                                   PlacementTarget="{Binding ElementName=comenzi}"
-                                   IsOpen="{Binding ElementName=comenzi, Path=IsMouseOver, Mode=OneWay}">
+       HorizontalOffset="-6"
+       PlacementTarget="{Binding ElementName=comenzi}"
+       IsOpen="{Binding ElementName=comenzi, Path=IsMouseOver, Mode=OneWay}">
+
                                 <Grid>
                                     <Border Background="#F0F0F0" Padding="5">
                                         <TextBlock Text="Comenzi!"
-                                                   Foreground="Black"
-                                                   FontWeight="Bold"
-                                                   FontSize="14" />
+                       Foreground="Black"
+                       FontWeight="Bold"
+                       FontSize="14" />
                                     </Border>
                                 </Grid>
+
                             </Popup>
+
                         </Button>
 
-                        <!-- About Us Button -->
+
+
                         <Button Grid.Column="5"
-                                x:Name="aboutus"
-                                BorderBrush="Transparent"
-                                BorderThickness="0,0,0,0"
-                                Padding="0"
-                                Click="aboutus_Click">
-                            <Button.Background>
-                                <ImageBrush Stretch="Uniform" ImageSource="/Images/phone-call.png" />
-                            </Button.Background>
+    x:Name="aboutus"
+    BorderBrush="Transparent"
+    BorderThickness="0,0,0,0"
+    Padding="0" Click="aboutus_Click">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent" />
+                                    <Setter Property="BorderBrush" Value="#182c25" />
+                                    <Setter Property="BorderThickness" Value="0" />
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#182c25" />
+                                            <Setter Property="BorderBrush" Value="#182c25" />
+                                            <Setter Property="BorderThickness" Value="2" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter Property="Background" Value="#182c25" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}">
+
+                                        <Image Source="/Images/phone-call.png" Stretch="Uniform"  />
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+
+
+
                             <Popup Width="85"
-                                   HorizontalOffset="-19"
-                                   PlacementTarget="{Binding ElementName=aboutus}"
-                                   IsOpen="{Binding ElementName=aboutus, Path=IsMouseOver, Mode=OneWay}"
-                                   Opacity="0"
-                                   Visibility="Hidden">
+       HorizontalOffset="-19"
+       PlacementTarget="{Binding ElementName=aboutus}"
+       IsOpen="{Binding ElementName=aboutus, Path=IsMouseOver, Mode=OneWay}" Opacity="0" Visibility="Hidden">
+
                                 <Grid>
                                     <Border Background="#F0F0F0" Padding="5">
                                         <TextBlock Text="Despre noi"
-                                                   Foreground="Black"
-                                                   FontWeight="Bold"
-                                                   FontSize="14" />
+                   Foreground="Black"
+                   FontWeight="Bold"
+                   FontSize="14" />
                                     </Border>
                                 </Grid>
+
                             </Popup>
+
                         </Button>
 
                     </Grid>
@@ -225,13 +324,69 @@
               HorizontalAlignment="Right"
               VerticalAlignment="Top"
               Margin="0,30,73,0">
-            <Button x:Name="user" BorderThickness="0,0,0,0" Click="user_Click">
-                <Button.Background>
-                    <ImageBrush Stretch="Uniform" ImageSource="/Images/profile-user.png" />
-                </Button.Background>
-            </Button>
-        </Grid>
+            <Button x:Name="user" BorderThickness="0,0,0,0" Click="user_Click" Height="50" VerticalAlignment="Top">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="BorderBrush" Value="#182c25" />
+                        <Setter Property="BorderThickness" Value="0" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#182c25" />
+                                <Setter Property="BorderBrush" Value="#182c25" />
+                                <Setter Property="BorderThickness" Value="2" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#182c25" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}">
 
+                            <Image Source="/Images/profile-user.png" Stretch="Uniform" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+
+
+            </Button>
+
+        </Grid>
+        <Button x:Name="logoutButton"
+BorderThickness="0,0,0,0" HorizontalAlignment="Left" Height="83" Margin="1082,116,0,0" VerticalAlignment="Top" Width="120" Click="logoutButton_Click" >
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="BorderBrush" Value="#182c25" />
+                    <Setter Property="BorderThickness" Value="0" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#182c25" />
+                            <Setter Property="BorderBrush" Value="#182c25" />
+                            <Setter Property="BorderThickness" Value="2" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#182c25" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}">
+
+                        <Image Source="/Images/logout.png" Stretch="Uniform" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+
+
+        </Button>
 
         <Grid Height="50"
               VerticalAlignment="Top"
@@ -239,15 +394,35 @@
               HorizontalAlignment="Left"
               Width="50">
             <Button x:Name="ExitBtn"
-                    BorderThickness="0,0,0,0"
-                    HorizontalAlignment="Center"
-                    Width="50"
-                    Click="ExitBtn_Click"
-                    Height="50"
-                    VerticalAlignment="Top">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Images/close.png" Stretch="Uniform" />
-                </Button.Background>
+BorderThickness="0,0,0,0" HorizontalAlignment="Center" Width="50" Click="ExitBtn_Click" Height="50" VerticalAlignment="Top" >
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="BorderBrush" Value="#182c25" />
+                        <Setter Property="BorderThickness" Value="0" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#182c25" />
+                                <Setter Property="BorderBrush" Value="#182c25" />
+                                <Setter Property="BorderThickness" Value="2" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#182c25" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}">
+
+                            <Image Source="/Images/close.png" Stretch="Uniform" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+
+
             </Button>
         </Grid>
     </Grid>

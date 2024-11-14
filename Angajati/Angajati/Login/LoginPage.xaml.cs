@@ -96,18 +96,24 @@ namespace Angajati
 
                 if (clientUser != null)
                 {
-                    // Aici pagina clientului
-                    //ClientiPage clientiPage = new ClientiPage(txtEmail.Text);
-                    //clientiPage.Show();
-                    HomeAdmin mp = new HomeAdmin(txtEmail.Text);
+                    MainPage mp = new MainPage(txtEmail.Text);
                     mp.Show();
                     this.Close();
                 }
                 else if (employeeUser != null)
                 {
-                    firstMenu firstPageMenu = new firstMenu(txtEmail.Text);
-                    firstPageMenu.Show();
-                    this.Close();
+                    if (context.VerificaAdministratorPeEmail(email) == 1)
+                    {
+                        HomeAdmin firstPageMenu = new HomeAdmin(txtEmail.Text);
+                        firstPageMenu.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        firstMenu f = new firstMenu(email);
+                        f.Show();
+                        this.Close();
+                    }
                 }
                 else
                 {

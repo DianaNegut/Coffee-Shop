@@ -82,7 +82,7 @@ namespace Angajati
             DateTime? data = datePicker.SelectedDate;
             string ora = (comboBoxTime.SelectedItem as ComboBoxItem)?.Content.ToString();
             string locuri = (comboBoxPeople.SelectedItem as ComboBoxItem)?.Content.ToString();
-            if (ora == null && locuri == null && locuri == null)
+            if (ora == null || locuri == null || locuri == null)
             {
                 Error eroare = new Error();
                 eroare.SetErrorMessage("Selectie invalida!");

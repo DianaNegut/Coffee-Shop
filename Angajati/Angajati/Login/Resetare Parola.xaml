@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Angajati.Login"
         mc:Ignorable="d"
-        Title="Resetare_Parola" Height="740" Width="1220">
+        Title="Resetare_Parola" Height="770" Width="1220">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>

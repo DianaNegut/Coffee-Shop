@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Angajati"
       mc:Ignorable="d" 
-      Height="740" Width="1220"
+      Height="770" Width="1220"
       Title="Reservation"
       WindowStartupLocation="CenterScreen"
       WindowStyle="None"

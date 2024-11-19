@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Angajati"
         mc:Ignorable="d"
-        Title="ShoppingCart" Height="740" Width="1220"
+        Title="ShoppingCart" Height="770" Width="1220"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         ResizeMode="NoResize"
@@ -15,20 +15,20 @@
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="Border"
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="Border"
                                 BorderBrush="Transparent"
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 Background="{TemplateBinding Background}"   >
-                        <ContentPresenter Margin="2"
+                            <ContentPresenter Margin="2"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
                                 RecognizesAccessKey="True" />
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Window.Resources>
 
@@ -79,16 +79,18 @@
             <Border Grid.Row="1"
                     Grid.Column="1"
                     Grid.ColumnSpan="2"
+                    VerticalAlignment="Top"
                     Background="White"
-                    Margin="0, 0, 30, 90"
-                    CornerRadius="40">
-                
+                    Height="400"
+                    Margin="0, 10, 30, 0"
+                    CornerRadius="40, 40, 40, 40">
+
             </Border>
 
             <TextBlock x:Name="TotalTag"
                        Grid.Row="1"
                        Grid.Column="1"
-                       Height="40"
+                       Height="70"
                        Width="250"
                        VerticalAlignment="Bottom"
                        HorizontalAlignment="Left"
@@ -97,13 +99,13 @@
                        FontWeight="Bold"
                        Margin="40, 0, 30, 90"
                        Visibility="Collapsed">
-                
+
             </TextBlock>
 
             <TextBlock x:Name="TotalVal"
                        Grid.Row="1"
                        Grid.Column="2"
-                       Height="40"
+                       Height="70"
                        Width="250"
                        VerticalAlignment="Bottom"
                        HorizontalAlignment="Right"
@@ -119,12 +121,12 @@
                      VerticalAlignment="Top"
                      HorizontalAlignment="Left"
                      x:Name="productsListBox"
-                     Height="430"
+                     Height="360"
                      Width="350"
                      Background="Transparent"
                      Foreground="Black"
                      BorderThickness="0,0,0,0"
-                     Margin="20,10,0,0" FontSize="15">
+                     Margin="30,20,0,0" FontSize="15">
             </ListBox>
 
             <ListBox Grid.Row="1"
@@ -132,12 +134,12 @@
                      VerticalAlignment="Top"
                      HorizontalAlignment="Right"
                      x:Name="productsPricesListBox"
-                     Height="440"
-                     Width="190"
+                     Height="360"
+                     Width="130"
                      Background="Transparent"
                      Foreground="Black"
                      BorderThickness="0,0,0,0"
-                     Margin="0,0,30,0" FontSize="15">
+                     Margin="0,20,40,0" FontSize="15">
             </ListBox>
 
             <Button Grid.Row="1"
@@ -151,10 +153,54 @@
                     Foreground="White"
                     Content="Finalizare"
                     FontSize="20"
-                    Click="PlaceOrderBtn_Click"
-                    >
-                
+                    Click="PlaceOrderBtn_Click">
+                    
+
             </Button>
+            <TextBlock Grid.Row="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"
+                       Height="40"
+                       Text="Alegeți metoda de plată:"
+                       Background="Transparent"
+                       FontSize="30"
+                       FontFamily="Oswald"
+                       Foreground="White"
+                       VerticalAlignment="Bottom"
+                        Margin="30,0,0,70">
+
+            </TextBlock>
+
+            <RadioButton x:Name="cash"
+                         Grid.Row="1"
+                         Grid.Column="1"
+                         Foreground="White"
+                         Content="Cash"
+                         GroupName="Plata"
+                         VerticalAlignment="Bottom"
+                         HorizontalAlignment="Left"
+                         Height="40"
+                         Width="100"
+                         FontSize="25"
+                         FontFamily="Oswald"
+                         Margin="30,0,0,21">
+            </RadioButton>
+
+            <RadioButton x:Name="card"
+                         Grid.Row="1"
+                         Grid.Column="1"
+                         Grid.ColumnSpan="2"
+                         Foreground="White"
+                         Content="Card"
+                         GroupName="Plata"
+                         VerticalAlignment="Bottom"
+                         HorizontalAlignment="Center"
+                         Height="40"
+                         Width="100"
+                         FontSize="25"
+                         FontFamily="Oswald"
+                         Margin="30,0,0,21">
+            </RadioButton>
 
 
             <Border Grid.Row="1"

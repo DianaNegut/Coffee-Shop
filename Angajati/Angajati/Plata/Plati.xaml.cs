@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Angajati.Message_Box;
+using System.Runtime.Remoting.Contexts;
+using System.Security.Cryptography;
 using static MaterialDesignThemes.Wpf.Theme;
 
 namespace Angajati.Plata
@@ -22,11 +24,23 @@ namespace Angajati.Plata
     public partial class Plati : Window
     {
         float price;
-        public Plati(float price)
+        string name;
+        int espressoshots, cream;
+        string syrup, milk;
+        string email;
+        public Plati(float price, string name, int espressoshots, int cream, string syrup, string milk, string email)
         {
             this.price = price;
+            this.name = name;
+            this.espressoshots = espressoshots;
+            this.cream = cream;
+            this.syrup = syrup;
+            this.milk = milk;
+
             InitializeComponent();
             this.SumaPlata.Text = price.ToString();
+            this.email = email;
+
         }
         private bool IsValidCardNumber(string cardNumber)
         {
@@ -59,13 +73,22 @@ namespace Angajati.Plata
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             System.Windows.Controls.TextBox textBox = sender as System.Windows.Controls.TextBox;
-
-            if (textBox != null && textBox.Text == "0000")
+            if (textBox != null && textBox.Text == "FIRST LAST")
             {
-                textBox.Text = "";
-                textBox.Foreground = new SolidColorBrush(Colors.Black); 
+                textBox.Text = string.Empty; 
+                textBox.Foreground = new SolidColorBrush(Colors.LightGray); 
             }
         }
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Controls.TextBox textBox = sender as System.Windows.Controls.TextBox;
+            if (textBox != null && string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                textBox.Text = "FIRST LAST"; 
+                textBox.Foreground = new SolidColorBrush(Colors.LightGray); 
+            }
+        }
+
 
         private void TextBox_PreviewTextInputName(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
@@ -118,16 +141,20 @@ namespace Angajati.Plata
                 textBox.CaretIndex = textBox.Text.Length;
             }
         }
-
-
         private void TextBox_GotFocusData(object sender, RoutedEventArgs e)
         {
             System.Windows.Controls.TextBox textBox = sender as System.Windows.Controls.TextBox;
-            if (textBox.Text == "DAY/MONTH")
+
+            if (textBox != null)
             {
-                textBox.Text = "";
+                if (textBox.Text == "00" || textBox.Text == "0000")
+                {
+                    textBox.Text = string.Empty;
+                    textBox.Foreground = new SolidColorBrush(Colors.LightGray); 
+                }
             }
         }
+
 
         private void TextBox_PreviewTextInputData(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
@@ -178,6 +205,56 @@ namespace Angajati.Plata
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var context = new CoffeeShopDataContext();
+            var cafea = new Cafele
+            {
+                Denumire = name,
+                ShoturiEspresso = espressoshots,
+                TipLapte = milk,
+                Sirop = syrup,
+                Frisca = cream,
+                Pret = (int)price
+            };
+
+            context.Cafeles.InsertOnSubmit(cafea);
+            context.SubmitChanges();
+
+
+            //pentru insert in Comenzi:
+            DateTime data = DateTime.Today;
+            int pret = (int)price;
+
+            var client = context.Clients.SingleOrDefault(p => p.Email == this.email);
+
+            var comanda = new Comenzi
+            {
+                DataComanda = data,
+                Pret = pret,
+                IDClient = client.IDClient
+            };
+
+            context.Comenzis.InsertOnSubmit(comanda);
+            context.SubmitChanges();
+
+            int idcafea = cafea.IDProdus;
+            int cantitate = 1;
+            int idcomanda = comanda.IDComanda;
+
+            var detalii = new DetaliiComenzi
+            {
+                IDCafea = idcafea,
+                IDComanda = idcomanda,
+                Cantitate = cantitate
+            };
+
+            context.DetaliiComenzis.InsertOnSubmit(detalii);
+            context.SubmitChanges();
+
+            //adaugare puncte client
+            int pct = pret * 5;
+            context.AdaugaPuncte(pct, client.Email);
+            context.SubmitChanges();
+
             Message m = new Message();
             m.SetErrorMessage("Plata a fost efectuata!");
             m.Show();

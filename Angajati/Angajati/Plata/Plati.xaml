@@ -19,8 +19,8 @@
                 </Border.Background>
                 <Grid>
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <TextBlock FontSize="25" Text="De plătit:" Style="{StaticResource titleText}" Foreground="White" HorizontalAlignment="Center"/>
-                        <TextBlock x:Name="SumaPlata" FontSize="80" Text="" Foreground="White" />
+                        <TextBlock FontSize="25" VerticalAlignment="Center" Text="De plătit:" Style="{StaticResource titleText}" Foreground="White" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="SumaPlata" VerticalAlignment="Center" FontSize="80" Text="" Foreground="White" />
                     </StackPanel>
                     <Button VerticalAlignment="Bottom" Background="{x:Null}" BorderBrush="{x:Null}">
                         <StackPanel Orientation="Horizontal" Width="120">
@@ -164,9 +164,11 @@
                                     BorderThickness="0"
                                     BorderBrush="Transparent"
                                     GotFocus="TextBox_GotFocus" 
-                                    PreviewTextInput="TextBox_PreviewTextInputName" TextChanged="TextBox_TextChanged" Width="131"/>
-
+                                    LostFocus="TextBox_LostFocus" 
+                                    PreviewTextInput="TextBox_PreviewTextInputName" 
+                                    TextChanged="TextBox_TextChanged" Width="131"/> 
                             </StackPanel>
+
                             <StackPanel Margin="20" Grid.Column="1">
                                 <TextBlock Text="    EXPIRĂ LA:" FontSize="7" Foreground="LightGray"/>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">

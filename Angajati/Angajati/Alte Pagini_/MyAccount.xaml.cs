@@ -73,6 +73,14 @@ namespace Angajati
             this.Close();
 
         }
+        
+            private void logoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            LoginPage l = new LoginPage();
+            l.Show();
+            this.Close();
+
+        }
 
         private void ReservationBtn_Click(object sender, RoutedEventArgs e)
         {

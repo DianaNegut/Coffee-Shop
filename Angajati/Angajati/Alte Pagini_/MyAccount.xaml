@@ -274,6 +274,7 @@
                             </Popup>
 
                         </Button>
+                        
 
 
                     </Grid>
@@ -283,6 +284,37 @@
             </Grid>
 
         </Grid>
+        <Button x:Name="logoutButton"
+BorderThickness="0,0,0,0" HorizontalAlignment="Left" Height="83" Margin="1082,116,0,0" VerticalAlignment="Top" Width="120" Click="logoutButton_Click" >
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="BorderBrush" Value="#182c25" />
+                    <Setter Property="BorderThickness" Value="0" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#182c25" />
+                            <Setter Property="BorderBrush" Value="#182c25" />
+                            <Setter Property="BorderThickness" Value="2" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#182c25" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}">
+
+                        <Image Source="/Images/logout.png" Stretch="Uniform" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+
+
+        </Button>
 
 
         <Grid Grid.Row="1"

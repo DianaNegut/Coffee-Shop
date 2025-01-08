@@ -67,6 +67,7 @@
                            Grid.RowSpan="2"/>
 
                             <TextBox x:Name="txtEmailAngajat" 
+                                     VerticalAlignment="Center"
                          Style="{StaticResource textBox}" 
                          Grid.Column="2"  
                          Margin="46,0,0,0" Foreground="White" 
@@ -86,11 +87,12 @@
                            Style="{StaticResource textHint}" 
                            Foreground="Gray" Height="19" Width="607"/>
                             <TextBox x:Name="txtMesaj" 
+                                     VerticalAlignment="Center"
                          Style="{StaticResource textBox}" Foreground="White"
                          Background="Transparent" 
                          AcceptsReturn="True" 
                          TextWrapping="Wrap" 
-                         Height="92" Width="474"/>
+                         Height="97" Width="474"/>
                         </StackPanel>
                     </Border>
                     <Button Content="Trimite feedback!"  Style="{StaticResource mainbutton}" Click="Button_Feedback_Click"/>

@@ -404,10 +404,6 @@ BorderThickness="0,0,0,0" HorizontalAlignment="Center" Width="50" Click="ExitBtn
                                     <Run Text="Rezervarea: " FontWeight="Bold"/>
                                     <Run Text="{Binding IdRezervare}"/>
                                     </TextBlock>
-                                    <TextBlock FontSize="20" Foreground="White" Margin="0,0,10,0">
-                                    <Run Text="Ora: " FontWeight="Bold"/>
-                                    <Run Text="{Binding OraRezervare}"/>            
-                                    </TextBlock>
                                 </StackPanel>
                             </Grid>
                         </DataTemplate>
